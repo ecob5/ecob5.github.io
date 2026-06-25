@@ -5,7 +5,7 @@ const portfolio = {
   availability: "Disponível para oportunidades de estágio e júnior",
   headline: "Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial",
   intro:
-    "Estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.",
+    "Sou estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.",
   focusArea: "Python, web, dados e IA",
   jobTarget: "Júnior ou estágio",
   email: "cristopher@tuta.io",
