@@ -9,14 +9,15 @@ const portfolio = {
   focusArea: "Python, web, dados e IA",
   jobTarget: "Júnior ou estágio",
   email: "cristopher@tuta.io",
+  alternateEmails: ["ecobittencourt@icloud.com", "enzocristopher2@gmail.com"],
   github: "https://github.com/ECOB7",
   linkedin: "https://www.linkedin.com/in/enzo-cristopher-oliveira-bittencourt-4590231bb",
   whatsapp: "https://wa.me/5524981557111",
   contactText:
-    "Aberto a oportunidades júnior, estágio e projetos práticos em desenvolvimento web, dados, automação e suporte técnico. E-mail principal: cristopher@tuta.io. Alternativos: ecobittencourt@icloud.com e enzocristopher2@gmail.com.",
+    "Aberto a oportunidades júnior, estágio e projetos práticos em desenvolvimento web, dados, automação e suporte técnico.",
   facts: [
     {
-      value: "7",
+      value: "7+",
       label: "Projetos",
       text: "Projetos em web, API REST, visão computacional, dados e automação com Arduino.",
     },
@@ -49,12 +50,14 @@ const portfolio = {
   projects: [
     {
       title: "Sistema Inteligente de Presença Facial",
-      type: "Destaque",
-      meta: "2024-2026 | Universidade de Vassouras | Projeto acadêmico e extensionista",
+      type: "Projeto extensionista",
+      meta: "2024-2026 | Universidade de Vassouras",
       description:
         "Sistema web para controle automático de presença em sala de aula utilizando reconhecimento facial. Inclui cadastro de alunos, captura de rosto, reconhecimento em tempo real, dashboard, relatórios e exportação de dados.",
       tags: ["Python", "Flask", "OpenCV", "NumPy", "SQLite", "HTML/CSS"],
       links: [],
+      image: "assets/projeto1.png",
+      imageAlt: "Tela Inicial do Sistema Inteligente de Presença Facial.",
     },
     {
       title: "Sistema de Gestão de Dados de Futebol / API Copa 2026",
@@ -64,6 +67,8 @@ const portfolio = {
         "Aplicação para cadastro, armazenamento e consulta de informações sobre seleções, clubes e jogadores. A API REST foi criada com Django REST Framework, testada com Postman e executada em ambiente conteinerizado com Docker.",
       tags: ["Python", "Django REST", "SQL", "Docker", "Postman", "GitHub"],
       links: [{ label: "GitHub", href: "https://github.com/ECOB7/copa2026" }],
+      image: "",
+      imageAlt: "",
     },
     {
       title: "GameSheft / Catálogo Pessoal de Jogos",
@@ -73,6 +78,8 @@ const portfolio = {
         "Aplicação web para gerenciamento de jogos, inspirada em plataformas de catálogo pessoal. Permite organizar jogos por status, consultar informações, controlar progresso e estruturar os dados em banco relacional.",
       tags: ["Python", "Django", "SQL", "Docker", "JavaScript", "HTML/CSS", "GitHub"],
       links: [{ label: "GitHub", href: "https://github.com/ECOB7/GameSheft" }],
+      image: "",
+      imageAlt: "",
     },
     {
       title: "Aplicativo Multiplataforma de Gerenciamento de Tarefas",
@@ -82,6 +89,8 @@ const portfolio = {
         "Aplicação híbrida para gerenciamento de tarefas, explorando funcionamento em diferentes dispositivos. O projeto teve foco em interface responsiva, adaptação de layout e estrutura de aplicações multiplataforma.",
       tags: ["HTML/CSS", "JavaScript", "Responsivo", "UI"],
       links: [],
+      image: "",
+      imageAlt: "",
     },
     {
       title: "Portal de Eventos Acadêmicos",
@@ -91,6 +100,8 @@ const portfolio = {
         "Aplicação web para exibição e organização de eventos acadêmicos, com páginas de apresentação, detalhes dos eventos, categorias e palestrantes. O foco foi estrutura de rotas, conteúdo e responsividade.",
       tags: ["Python", "Flask", "HTML", "CSS"],
       links: [{ label: "GitHub", href: "https://github.com/ECOB7/SGTA" }],
+      image: "",
+      imageAlt: "",
     },
     {
       title: "Festival Brasil",
@@ -100,6 +111,8 @@ const portfolio = {
         "Interface web para apresentação de atrações do Festival Brasil, com páginas de catálogo e detalhes. O projeto trabalhou navegação entre conteúdos, organização visual e layout para informações ao usuário.",
       tags: ["HTML", "CSS", "JavaScript"],
       links: [],
+      image: "",
+      imageAlt: "",
     },
     {
       title: "Projetos de Automação com Arduino",
@@ -109,6 +122,19 @@ const portfolio = {
         "Projetos acadêmicos com Arduino para simulação de sistemas automatizados. As atividades envolveram entradas e saídas digitais, sensores, LEDs, buzzer, motor e lógica de resposta a eventos, incluindo dado eletrônico e controle de temperatura e umidade.",
       tags: ["Arduino", "Wokwi", "C++", "Sensores", "Buzzer", "LED", "Motor"],
       links: [],
+      image: "",
+      imageAlt: "",
+    },
+    {
+      title: "Outros Projetos",
+      type: "GitHub",
+      meta: "Projetos acadêmicos e estudos práticos",
+      description:
+        "Além dos projetos em destaque, mantenho no GitHub outros estudos e aplicações desenvolvidas durante minha formação, incluindo projetos front-end, automações, páginas web, exercícios de programação e experimentos com novas tecnologias.",
+      tags: ["GitHub", "HTML/CSS", "JavaScript", "Python", "Arduino", "Estudos"],
+      links: [{ label: "Ver GitHub", href: "https://github.com/ECOB7" }],
+      image: "",
+      imageAlt: "",
     },
   ],
   skillGroups: [
@@ -253,10 +279,19 @@ function renderProjects() {
 
     const tags = project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     const links = project.links
-      .map((link) => `<a class="project-github" href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`)
+      .map((link) => `<a class="project-github" href="${link.href || link.url}" target="_blank" rel="noreferrer">${link.label}</a>`)
       .join("");
+    const projectImage = project.image
+      ? `
+        <figure class="project-media">
+          <img src="${project.image}" alt="${project.imageAlt || `Imagem do projeto ${project.title}`}" loading="lazy">
+          <button class="project-zoom" type="button" data-project-index="${index}" aria-label="Ampliar imagem do projeto ${project.title}" title="Ampliar imagem"></button>
+        </figure>
+      `
+      : "";
 
     card.innerHTML = `
+      ${projectImage}
       <div class="project-topline">
         <div class="project-actions">
           <span class="project-number">${String(index + 1).padStart(2, "0")}</span>
@@ -271,6 +306,75 @@ function renderProjects() {
     `;
 
     grid.appendChild(card);
+  });
+}
+
+function getImageModal() {
+  let modal = $("#imageModal");
+  if (modal) return modal;
+
+  modal = document.createElement("div");
+  modal.className = "image-modal";
+  modal.id = "imageModal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "imageModalTitle");
+  modal.hidden = true;
+  modal.innerHTML = `
+    <button class="image-modal-backdrop" type="button" aria-label="Fechar imagem ampliada"></button>
+    <div class="image-modal-panel">
+      <div class="image-modal-header">
+        <div>
+          <p>Imagem do projeto</p>
+          <h3 id="imageModalTitle"></h3>
+        </div>
+        <button class="image-modal-close" type="button" aria-label="Fechar imagem ampliada">X</button>
+      </div>
+      <img id="imageModalImg" src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  modal.querySelector(".image-modal-backdrop").addEventListener("click", closeImageModal);
+  modal.querySelector(".image-modal-close").addEventListener("click", closeImageModal);
+
+  return modal;
+}
+
+function openImageModal(project) {
+  const modal = getImageModal();
+  const image = modal.querySelector("#imageModalImg");
+
+  setText("#imageModalTitle", project.title);
+  image.src = project.image;
+  image.alt = project.imageAlt || `Imagem ampliada do projeto ${project.title}`;
+
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  modal.querySelector(".image-modal-close").focus();
+}
+
+function closeImageModal() {
+  const modal = $("#imageModal");
+  if (!modal || modal.hidden) return;
+
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function setupProjectZoom() {
+  const grid = $("#projectGrid");
+
+  grid.addEventListener("click", (event) => {
+    const button = event.target.closest(".project-zoom");
+    if (!button) return;
+
+    const project = portfolio.projects[Number(button.dataset.projectIndex)];
+    if (project?.image) openImageModal(project);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeImageModal();
   });
 }
 
@@ -391,6 +495,32 @@ function renderContactLinks() {
   });
 }
 
+function renderContactEmails() {
+  const container = $("#contactEmails");
+  if (!container) return;
+
+  const emails = [
+    { label: "Principal", value: portfolio.email },
+    ...portfolio.alternateEmails.map((email) => ({ label: "Alternativo", value: email })),
+  ];
+
+  const listItems = emails
+    .map(
+      (item) => `
+        <span>
+          <span class="email-role">${item.label}</span>
+          <strong>${item.value}</strong>
+        </span>
+      `
+    )
+    .join("");
+
+  container.innerHTML = `
+    <span class="contact-emails-label">E-mails</span>
+    <div class="contact-email-list">${listItems}</div>
+  `;
+}
+
 function setContactStatus(message) {
   setText("#contactStatus", message);
 }
@@ -482,7 +612,9 @@ function renderPortfolio() {
   renderSkillGroups();
   renderLanguages();
   renderTimeline();
+  renderContactEmails();
   renderContactLinks();
+  setupProjectZoom();
   setupMenu();
 }
 

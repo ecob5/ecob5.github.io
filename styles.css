@@ -34,6 +34,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -343,6 +347,73 @@ h3 {
   background: var(--surface);
 }
 
+.project-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(21, 25, 28, 0.12);
+  border-radius: var(--radius);
+  background: rgba(247, 243, 234, 0.78);
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(21, 25, 28, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 253, 247, 0.95);
+  box-shadow: 0 10px 24px rgba(21, 25, 28, 0.18);
+  cursor: pointer;
+}
+
+.project-zoom::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  transform: translate(-2px, -2px);
+}
+
+.project-zoom::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--ink);
+  transform: translate(7px, 8px) rotate(45deg);
+}
+
+.project-zoom:hover,
+.project-zoom:focus-visible {
+  background: var(--ink);
+  outline: none;
+}
+
+.project-zoom:hover::before,
+.project-zoom:focus-visible::before {
+  border-color: var(--surface);
+}
+
+.project-zoom:hover::after,
+.project-zoom:focus-visible::after {
+  background: var(--surface);
+}
+
 .project-topline {
   display: flex;
   align-items: center;
@@ -454,6 +525,88 @@ h3 {
   outline: none;
 }
 
+.image-modal[hidden] {
+  display: none;
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.image-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(21, 25, 28, 0.78);
+  cursor: zoom-out;
+}
+
+.image-modal-panel {
+  position: relative;
+  width: min(1040px, calc(100vw - 32px));
+  max-height: calc(100svh - 48px);
+  display: grid;
+  gap: 14px;
+  border: 1px solid rgba(255, 253, 247, 0.22);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: var(--surface);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+}
+
+.image-modal-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.image-modal-header p {
+  margin-bottom: 4px;
+  color: var(--teal-dark);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.image-modal-header h3 {
+  margin-bottom: 0;
+  font-size: 1.08rem;
+}
+
+.image-modal-close {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus-visible {
+  background: var(--ink);
+  color: var(--surface);
+  outline: none;
+}
+
+.image-modal-panel img {
+  width: 100%;
+  max-height: calc(100svh - 160px);
+  object-fit: contain;
+  border: 1px solid rgba(21, 25, 28, 0.1);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
 .skills-layout {
   display: block;
 }
@@ -535,11 +688,16 @@ h3 {
   border-radius: var(--radius);
   padding: 34px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, auto);
   align-items: center;
   gap: 28px;
   background: var(--ink);
   color: var(--surface);
+}
+
+.contact-copy {
+  display: grid;
+  gap: 14px;
 }
 
 .contact .section-kicker,
@@ -547,8 +705,55 @@ h3 {
   color: rgba(255, 253, 247, 0.74);
 }
 
+.contact .section-kicker,
+.contact h2,
+.contact p {
+  margin-bottom: 0;
+}
+
 .contact h2 {
   max-width: 760px;
+}
+
+.contact-emails {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 253, 247, 0.18);
+}
+
+.contact-emails-label {
+  color: rgba(255, 253, 247, 0.58);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-email-list {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-email-list span {
+  min-width: 0;
+  color: rgba(255, 253, 247, 0.82);
+  overflow-wrap: anywhere;
+}
+
+.contact-email-list strong {
+  color: var(--surface);
+  font-weight: 850;
+}
+
+.email-role {
+  display: inline-flex;
+  min-width: 88px;
+  margin-right: 8px;
+  color: rgba(255, 253, 247, 0.58);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .contact .button {
@@ -567,6 +772,7 @@ h3 {
 
 .contact-status {
   min-height: 1.4em;
+  margin-top: 2px;
   margin-bottom: 0;
   font-weight: 800;
 }
@@ -614,6 +820,7 @@ h3 {
 
   .contact {
     width: min(var(--max), calc(100% - 32px));
+    align-items: start;
   }
 }
 
@@ -680,5 +887,30 @@ h3 {
 
   .contact {
     padding: 24px;
+  }
+
+  .project-zoom {
+    width: 36px;
+    height: 36px;
+  }
+
+  .image-modal {
+    padding: 14px;
+  }
+
+  .image-modal-panel {
+    width: calc(100vw - 28px);
+    max-height: calc(100svh - 28px);
+    padding: 12px;
+  }
+
+  .image-modal-header h3 {
+    font-size: 0.98rem;
+  }
+
+  .email-role {
+    display: block;
+    min-width: 0;
+    margin: 0 0 2px;
   }
 }
