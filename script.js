@@ -10,7 +10,7 @@ const portfolio = {
   jobTarget: "Júnior ou estágio",
   email: "cristopher@tuta.io",
   alternateEmails: ["ecobittencourt@icloud.com", "enzocristopher2@gmail.com"],
-  github: "https://github.com/ECOB7",
+  github: "https://github.com/ecob5",
   linkedin: "https://www.linkedin.com/in/enzo-cristopher-oliveira-bittencourt-4590231bb",
   whatsapp: "https://wa.me/5524981557111",
   contactText:
