@@ -66,7 +66,7 @@ const portfolio = {
       description:
         "Aplicação para cadastro, armazenamento e consulta de informações sobre seleções, clubes e jogadores. A API REST foi criada com Django REST Framework, testada com Postman e executada em ambiente conteinerizado com Docker.",
       tags: ["Python", "Django REST", "SQL", "Docker", "Postman", "GitHub"],
-      links: [{ label: "GitHub", href: "https://github.com/ECOB7/copa2026" }],
+      links: [{ label: "GitHub", href: "https://github.com/ecob5/copa2026" }],
       image: "",
       imageAlt: "",
     },
@@ -77,7 +77,7 @@ const portfolio = {
       description:
         "Aplicação web para gerenciamento de jogos, inspirada em plataformas de catálogo pessoal. Permite organizar jogos por status, consultar informações, controlar progresso e estruturar os dados em banco relacional.",
       tags: ["Python", "Django", "SQL", "Docker", "JavaScript", "HTML/CSS", "GitHub"],
-      links: [{ label: "GitHub", href: "https://github.com/ECOB7/GameSheft" }],
+      links: [{ label: "GitHub", href: "https://github.com/ecob5/GameSheft" }],
       image: "",
       imageAlt: "",
     },
@@ -99,7 +99,7 @@ const portfolio = {
       description:
         "Aplicação web para exibição e organização de eventos acadêmicos, com páginas de apresentação, detalhes dos eventos, categorias e palestrantes. O foco foi estrutura de rotas, conteúdo e responsividade.",
       tags: ["Python", "Flask", "HTML", "CSS"],
-      links: [{ label: "GitHub", href: "https://github.com/ECOB7/SGTA" }],
+      links: [{ label: "GitHub", href: "https://github.com/ecob5/SGTA" }],
       image: "",
       imageAlt: "",
     },
@@ -132,7 +132,7 @@ const portfolio = {
       description:
         "Além dos projetos em destaque, mantenho no GitHub outros estudos e aplicações desenvolvidas durante minha formação, incluindo projetos front-end, automações, páginas web, exercícios de programação e experimentos com novas tecnologias.",
       tags: ["GitHub", "HTML/CSS", "JavaScript", "Python", "Arduino", "Estudos"],
-      links: [{ label: "Ver GitHub", href: "https://github.com/ECOB7" }],
+      links: [{ label: "Ver GitHub", href: "https://github.com/ecob5" }],
       image: "",
       imageAlt: "",
     },
