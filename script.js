@@ -448,6 +448,12 @@ function setHeroPresentation(welcomeText, isEnglish, highlightedVisitorName = ""
   const identity = document.createElement("span");
   identity.className = "hero-identity";
 
+  const identityFirstLine = document.createElement("span");
+  identityFirstLine.className = "hero-identity-line";
+
+  const identitySecondLine = document.createElement("span");
+  identitySecondLine.className = "hero-identity-line";
+
   const fullName = document.createElement("strong");
   fullName.className = "hero-full-name";
   ["Enzo", "Cristopher", "Oliveira", "Bittencourt"].forEach((namePart, index) => {
@@ -462,13 +468,19 @@ function setHeroPresentation(welcomeText, isEnglish, highlightedVisitorName = ""
   alias.className = "hero-alias";
   alias.textContent = "ECOB";
 
-  identity.append(
+  identityFirstLine.append(
     document.createTextNode(isEnglish ? "My name is " : "Meu nome é "),
     fullName,
-    document.createTextNode(isEnglish ? ", but you can also call me " : ", mas você também pode me chamar de "),
+    document.createTextNode(",")
+  );
+
+  identitySecondLine.append(
+    document.createTextNode(isEnglish ? "but you can also call me " : "mas você também pode me chamar de "),
     alias,
     document.createTextNode(".")
   );
+
+  identity.append(identityFirstLine, identitySecondLine);
 
   heroGreeting.replaceChildren(welcome, identity);
 }
@@ -608,6 +620,7 @@ function updateVisitorIntroLanguage() {
   setText("#visitorNameHint", text.hint);
   setText("#visitorSkip", text.skip);
   setText("#visitorRemoveName", text.remove);
+  $("#visitorSkip").classList.toggle("is-decline", !visitorIntroEditMode);
   $("#visitorNameInput").placeholder = text.placeholder;
   $("#introLanguageChoice").setAttribute("aria-label", text.language);
 
