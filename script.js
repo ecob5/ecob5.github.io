@@ -5,7 +5,7 @@ const portfolio = {
   availability: "Disponível para oportunidades de estágio e júnior",
   headline: "Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial",
   intro:
-    "Sou estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.",
+    "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, os projetos que venho construindo e como estou direcionando minha trajetória para software e inteligência artificial.",
   focusArea: "Python, web, dados e IA",
   jobTarget: "Júnior ou estágio",
   email: "cristopher@tuta.io",
@@ -17,122 +17,108 @@ const portfolio = {
     "Aberto a oportunidades júnior, estágio e projetos práticos em desenvolvimento web, dados, automação e suporte técnico.",
   facts: [
     {
-      value: "7+",
-      label: "Projetos",
-      text: "Projetos em web, API REST, visão computacional, dados e automação com Arduino.",
+      value: "26",
+      label: "Projetos públicos no GitHub",
+      text: "Contagem atualizada automaticamente a partir do meu perfil público.",
+      githubRepoCount: true,
     },
     {
-      value: "Python",
-      label: "Base técnica principal",
-      text: "Desenvolvimento de projetos com Flask, Django REST Framework, OpenCV, NumPy e automações.",
+      value: "Front-end",
+      label: "Interfaces web",
+      text: "Criação de interfaces responsivas com HTML, CSS, JavaScript e integração com APIs.",
     },
     {
-      value: "SQL",
-      label: "Banco de dados e organização de dados",
-      text: "Criação de consultas, estruturação de registros e uso em projetos com SQLite/MySQL.",
+      value: "Back-end",
+      label: "APIs e aplicações",
+      text: "Desenvolvimento com Python, Flask, Django REST Framework, Node.js e Express.",
     },
     {
-      value: "Web e APIs",
-      label: "Desenvolvimento de aplicações web",
-      text: "Projetos com HTML, CSS, JavaScript, Flask, Django REST Framework e integração com APIs.",
-    },
-    {
-      value: "Docker e Git",
-      label: "Ambiente e versionamento",
-      text: "Uso de Docker para padronização de ambiente e Git/GitHub para controle de versão dos projetos.",
+      value: "Dados",
+      label: "Bancos e análise",
+      text: "Modelagem e consultas com SQL, SQLite e MySQL, além de NumPy, Excel e Power BI.",
     },
     {
       value: "IA aplicada",
-      label: "Interesse e apoio ao desenvolvimento",
-      text: "Uso de ferramentas de IA para prototipação, organização de ideias, revisão de código e documentação.",
+      label: "LLMs, RAG e visão computacional",
+      text: "Criação e avaliação de soluções com LLMs, RAG, embeddings, OpenCV e modelos locais.",
+    },
+    {
+      value: "DevOps & Automação",
+      label: "Entrega e fluxos de trabalho",
+      text: "Versionamento com Git/GitHub, ambientes com Docker e automações com n8n e Arduino.",
     },
   ],
   projects: [
     {
+      title: "Local Coding Agent",
+      type: "AI Agent",
+      description:
+        "Agente de programação executado pelo terminal, capaz de interagir com um LLM e utilizar ferramentas para ler arquivos, modificar código e executar comandos no projeto através de tool calling.",
+      highlights: [
+        "Integração com modelos compatíveis com a API da OpenAI via OpenRouter.",
+        "Leitura e edição de arquivos limitadas ao diretório do projeto.",
+        "Execução iterativa de comandos Bash por meio de tool calling.",
+      ],
+      tags: ["Python", "LLMs", "OpenAI SDK", "OpenRouter", "Tool Calling", "Bash"],
+      links: [{ label: "Ver no GitHub", href: "https://github.com/ecob5/local-coding-agent" }],
+      image: "",
+      imageAlt: "",
+      featured: true,
+    },
+    {
+      title: "RAG Document Assistant",
+      type: "RAG API",
+      description:
+        "API de perguntas e respostas sobre documentos com RAG. Processa arquivos PDF e TXT, gera embeddings, realiza busca vetorial por similaridade e retorna as fontes utilizadas pelo LLM.",
+      highlights: [
+        "Processamento de documentos PDF e TXT com divisão em chunks.",
+        "Geração de embeddings e recuperação de contexto por busca vetorial.",
+        "Respostas acompanhadas das fontes utilizadas pelo modelo.",
+      ],
+      tags: ["TypeScript", "Node.js", "Express", "RAG", "OpenAI SDK", "Embeddings", "Vector Search", "Zod", "Vitest"],
+      links: [{ label: "Ver no GitHub", href: "https://github.com/ecob5/RAG_document_assistant" }],
+      image: "",
+      imageAlt: "",
+      featured: true,
+    },
+    {
       title: "Sistema Inteligente de Presença Facial",
       type: "Projeto extensionista",
-      meta: "2024-2026 | Universidade de Vassouras",
       description:
         "Sistema web para controle automático de presença em sala de aula utilizando reconhecimento facial. Inclui cadastro de alunos, captura de rosto, reconhecimento em tempo real, dashboard, relatórios e exportação de dados.",
-      tags: ["Python", "Flask", "OpenCV", "NumPy", "SQLite", "HTML/CSS"],
+      tags: ["Python", "Flask", "OpenCV", "NumPy", "SQLite", "Computer Vision", "HTML/CSS"],
       links: [],
       image: "assets/projeto1.png",
-      imageAlt: "Tela Inicial do Sistema Inteligente de Presença Facial.",
+      imageAlt: "Tela do Sistema Inteligente de Presença Facial.",
+      featured: true,
     },
     {
-      title: "Sistema de Gestão de Dados de Futebol / API Copa 2026",
-      type: "API REST",
-      meta: "2026 | Universidade de Vassouras | Aplicação web e banco de dados",
+      title: "API Copa 2026",
+      type: "REST API",
       description:
-        "Aplicação para cadastro, armazenamento e consulta de informações sobre seleções, clubes e jogadores. A API REST foi criada com Django REST Framework, testada com Postman e executada em ambiente conteinerizado com Docker.",
-      tags: ["Python", "Django REST", "SQL", "Docker", "Postman", "GitHub"],
-      links: [{ label: "GitHub", href: "https://github.com/ecob5/copa2026" }],
+        "API REST para gerenciamento de seleções e jogadores da Copa do Mundo de 2026, com modelagem de dados, endpoints CRUD, persistência, testes de API e execução em ambiente conteinerizado.",
+      tags: ["Python", "Django REST Framework", "REST API", "SQL", "Docker", "Postman"],
+      links: [{ label: "Ver no GitHub", href: "https://github.com/ecob5/copa2026" }],
       image: "",
       imageAlt: "",
     },
     {
-      title: "GameSheft / Catálogo Pessoal de Jogos",
-      type: "Catálogo web",
-      meta: "2026 | Projeto pessoal e acadêmico | Aplicação web",
+      title: "GameShelf",
+      type: "Back-end",
       description:
-        "Aplicação web para gerenciamento de jogos, inspirada em plataformas de catálogo pessoal. Permite organizar jogos por status, consultar informações, controlar progresso e estruturar os dados em banco relacional.",
-      tags: ["Python", "Django", "SQL", "Docker", "JavaScript", "HTML/CSS", "GitHub"],
-      links: [{ label: "GitHub", href: "https://github.com/ecob5/GameSheft" }],
+        "Aplicação back-end para organização de uma biblioteca pessoal de jogos, permitindo cadastrar nome, desenvolvedora, gênero e status, além de consultar e filtrar registros através de endpoints da API.",
+      tags: ["Python", "Django", "Django REST Framework", "SQLite", "REST API", "Django ORM"],
+      links: [{ label: "Ver no GitHub", href: "https://github.com/ecob5/GameSheft" }],
       image: "",
       imageAlt: "",
     },
     {
-      title: "Aplicativo Multiplataforma de Gerenciamento de Tarefas",
-      type: "Multiplataforma",
-      meta: "2024 | Universidade de Vassouras | Aplicação híbrida",
-      description:
-        "Aplicação híbrida para gerenciamento de tarefas, explorando funcionamento em diferentes dispositivos. O projeto teve foco em interface responsiva, adaptação de layout e estrutura de aplicações multiplataforma.",
-      tags: ["HTML/CSS", "JavaScript", "Responsivo", "UI"],
-      links: [],
-      image: "",
-      imageAlt: "",
-    },
-    {
-      title: "Portal de Eventos Acadêmicos",
-      type: "Web",
-      meta: "2026 | Universidade de Vassouras | Aplicação web",
-      description:
-        "Aplicação web para exibição e organização de eventos acadêmicos, com páginas de apresentação, detalhes dos eventos, categorias e palestrantes. O foco foi estrutura de rotas, conteúdo e responsividade.",
-      tags: ["Python", "Flask", "HTML", "CSS"],
-      links: [{ label: "GitHub", href: "https://github.com/ecob5/SGTA" }],
-      image: "",
-      imageAlt: "",
-    },
-    {
-      title: "Festival Brasil",
-      type: "Front-end",
-      meta: "2026 | Universidade de Vassouras | Catálogo web",
-      description:
-        "Interface web para apresentação de atrações do Festival Brasil, com páginas de catálogo e detalhes. O projeto trabalhou navegação entre conteúdos, organização visual e layout para informações ao usuário.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      links: [],
-      image: "",
-      imageAlt: "",
-    },
-    {
-      title: "Projetos de Automação com Arduino",
-      type: "Automação",
-      meta: "2026 | Universidade de Vassouras | Simulação Arduino",
-      description:
-        "Projetos acadêmicos com Arduino para simulação de sistemas automatizados. As atividades envolveram entradas e saídas digitais, sensores, LEDs, buzzer, motor e lógica de resposta a eventos, incluindo dado eletrônico e controle de temperatura e umidade.",
-      tags: ["Arduino", "Wokwi", "C++", "Sensores", "Buzzer", "LED", "Motor"],
-      links: [],
-      image: "",
-      imageAlt: "",
-    },
-    {
-      title: "Outros Projetos",
+      title: "Outros projetos",
       type: "GitHub",
-      meta: "Projetos acadêmicos e estudos práticos",
       description:
-        "Além dos projetos em destaque, mantenho no GitHub outros estudos e aplicações desenvolvidas durante minha formação, incluindo projetos front-end, automações, páginas web, exercícios de programação e experimentos com novas tecnologias.",
-      tags: ["GitHub", "HTML/CSS", "JavaScript", "Python", "Arduino", "Estudos"],
-      links: [{ label: "Ver GitHub", href: "https://github.com/ecob5" }],
+        "Acesse meu perfil no GitHub para conhecer outros projetos, estudos práticos e experimentos desenvolvidos durante minha formação em software e inteligência artificial.",
+      tags: ["Python", "IA", "Back-end", "Front-end"],
+      links: [{ label: "Ver outros projetos", href: "https://github.com/ecob5" }],
       image: "",
       imageAlt: "",
     },
@@ -140,100 +126,824 @@ const portfolio = {
   skillGroups: [
     {
       title: "Linguagens",
-      items: ["Python", "JavaScript", "Java", "C++", "HTML", "CSS", "YAML"],
+      items: ["Python", "TypeScript", "JavaScript", "Java", "C++", "HTML", "CSS", "YAML"],
     },
     {
-      title: "Backend e desenvolvimento web",
-      items: ["Flask", "Django", "Django REST Framework", "APIs REST"],
+      title: "IA, LLMs e RAG",
+      items: ["LLMs", "RAG", "OpenAI SDK", "OpenRouter", "Tool Calling", "Embeddings", "Vector Search", "Prompt Evaluation", "Code Evaluation", "AI Safety"],
     },
     {
-      title: "Banco de dados",
-      items: ["SQLite", "MySQL", "SQL"],
+      title: "Backend e APIs",
+      items: ["Flask", "Django", "Django REST Framework", "Node.js", "Express", "APIs REST", "Zod"],
     },
     {
-      title: "Ferramentas",
-      items: ["Git", "GitHub", "GitLab", "Visual Studio Code", "Docker", "Notepad++"],
+      title: "Dados e bancos de dados",
+      items: ["SQL", "SQLite", "MySQL", "NumPy", "Excel", "Power BI", "Dados relacionais"],
     },
     {
-      title: "Dados e visão computacional",
-      items: ["Excel", "Power BI", "Organização e tratamento de dados"],
+      title: "Ferramentas de IA",
+      items: ["LM Studio", "ChatGPT Codex", "Claude Code", "Gemini", "Qwen", "Gemma", "Modelos locais"],
     },
     {
-      title: "Suporte e infraestrutura",
-      items: ["Manutenção de hardware", "Diagnóstico de computadores", "Windows", "Linux básico"],
+      title: "Desenvolvimento e qualidade",
+      items: ["Git", "GitHub", "GitLab", "Docker", "Postman", "Vitest", "Visual Studio Code"],
     },
     {
-      title: "Arduino e simulação",
-      items: ["Arduino", "Wokwi", "Tinkercad", "Sensores DHT", "Servomotor"],
+      title: "Automação, IoT e visão computacional",
+      items: ["n8n", "OpenCV", "Computer Vision", "Arduino", "Wokwi", "Tinkercad", "Sensores DHT", "Servomotor"],
     },
     {
-      title: "Cibersegurança em aprendizado",
-      items: ["TryHackMe", "Fundamentos de cibersegurança", "Noções de pentest", "Redes", "Linux"],
+      title: "Suporte, sistemas e segurança",
+      items: ["Troubleshooting", "Manutenção de hardware", "Diagnóstico de computadores", "Windows", "Linux", "Redes", "TryHackMe", "Fundamentos de cibersegurança"],
     },
     {
-      title: "Produtividade",
-      items: ["Pacote Office", "Excel", "Documentação", "Organização de projetos", "criatividade", "IA aplicada"],
+      title: "Idiomas",
+      items: ["Português - Nativo", "Francês - Avançado (B2)", "Inglês - Intermediário", "Espanhol - Básico"],
     },
-  ],
-  languages: [
-    { name: "Francês", level: "Intermediário" },
-    { name: "Inglês", level: "Intermediário" },
-    { name: "Espanhol", level: "Básico" },
   ],
   experiences: [
     {
-      role: "Auxiliar de Suporte Técnico",
-      company: "Visual Online",
-      location: "Contern, Luxemburgo",
+      role: "Generalist AI Trainer",
+      company: "Outlier",
+      period: "2026 - Atual",
+      location: "",
       bullets: [
-        "Atendimento e suporte técnico a usuários em ambiente de tecnologia.",
-        "Diagnóstico inicial de problemas de conectividade, dispositivos e computadores.",
-        "Apoio na resolução de falhas de rede, internet e equipamentos.",
-        "Manutenção preventiva em equipamentos de informática.",
-        "Desenvolvimento de habilidades em troubleshooting, comunicação técnica e resolução de problemas.",
+        "Avaliação de modelos de Inteligência Artificial por meio de testes estruturados.",
+        "Análise da qualidade, correção e relevância das respostas geradas.",
+        "Verificação do cumprimento de diretrizes e critérios específicos de avaliação.",
+        "Comparação do comportamento dos modelos em tarefas envolvendo texto, código e segurança.",
+        "Identificação de erros, riscos e problemas de segurança nas respostas geradas pelos modelos.",
+        "Registro dos resultados para apoiar melhorias na qualidade e confiabilidade dos modelos.",
       ],
     },
     {
-      role: "Eletrotécnico",
+      role: "Estagiário Técnico de Engenharia",
       company: "GK Engineering SA",
+      period: "2019",
       location: "Luxemburgo",
       bullets: [
-        "Apoio em instalação, manutenção e testes de sistemas elétricos.",
-        "Realização de diagnósticos em equipamentos.",
-        "Auxílio na interpretação de projetos e documentação técnica.",
-        "Desenvolvimento de raciocínio técnico, atenção aos detalhes e análise de problemas.",
+        "Apoio às atividades técnicas de um escritório de engenharia.",
+        "Organização e revisão de documentos e projetos técnicos.",
+        "Realização de verificações, identificação de inconsistências e suporte às demandas da equipe.",
+        "Análise técnica, resolução de problemas e cumprimento de procedimentos.",
       ],
     },
-  ],
-  timeline: [
     {
-      period: "2026",
-      title: "Git e Controle de Versão",
-      text: "Atividade prática sobre Git, organização de repositórios, acompanhamento de alterações e boas práticas de colaboração.",
-    },
-    {
-      period: "2026",
-      title: "Semana das Engenharias - Tecnologia e Inovação",
-      text: "Participação em atividades, palestras e minicursos sobre tecnologia, inovação e aplicações práticas da engenharia.",
-    },
-    {
-      period: "2023",
-      title: "Curso Intensivo de Inglês",
-      text: "Centre de Formation Lucien Huss, Luxemburgo. Desenvolvimento de comunicação em inglês para contexto acadêmico e profissional.",
-    },
-    {
-      period: "2022-2023",
-      title: "Formação em Programação e Lógica com Python",
-      text: "Digital Learning Hub, Luxemburgo. Estudos em lógica de programação, algoritmos, estruturas de controle, condicionais, loops, funções, manipulação básica de dados e criação de scripts em Python.",
+      role: "Suporte técnico",
+      company: "Visual Online",
+      period: "2017 - 2018",
+      location: "Contern, Luxemburgo",
+      bullets: [
+        "Atendimento, suporte técnico e orientação básica a usuários.",
+        "Diagnóstico inicial de problemas relacionados à conectividade, dispositivos e equipamentos.",
+        "Apoio na resolução de falhas de rede, internet e funcionamento de computadores.",
+        "Manutenção preventiva, troubleshooting e encaminhamento de demandas técnicas quando necessário.",
+      ],
     },
   ],
 };
+
+const englishTranslations = Object.freeze({
+  "Pular para o conteúdo": "Skip to content",
+  "Sobre": "About",
+  "Experiência": "Experience",
+  "Projetos": "Projects",
+  "Habilidades": "Skills",
+  "Contato": "Contact",
+  "Disponível para oportunidades de estágio e júnior": "Open to internship and junior opportunities",
+  "Olá, eu sou Enzo Cristopher Oliveira Bittencourt.": "Hi, I'm Enzo Cristopher Oliveira Bittencourt.",
+  "Olá, eu sou": "Hi, I'm",
+  "Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial": "Software Engineering student focused on Python, Data, Web Development and Artificial Intelligence",
+  "Sou estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.": "I am a Software Engineering student with a technical background and international experience in Luxembourg. I build projects involving web development, APIs, computer vision and databases, with a focus on Python, data and applied AI.",
+  "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, os projetos que venho construindo e como estou direcionando minha trajetória para software e inteligência artificial.": "This is my portfolio. Here you can learn a little about me, the projects I have been building, and how I am shaping my path in software and artificial intelligence.",
+  "Por onde você quer começar?": "Where would you like to start?",
+  "Navegação inicial": "Introductory navigation",
+  "Explorar projetos": "Explore projects",
+  "Copiar e-mail": "Copy email",
+  "FOCO ATUAL": "CURRENT FOCUS",
+  "OBJETIVO": "GOAL",
+  "Foco atual": "Current focus",
+  "Objetivo": "Goal",
+  "Python, web, dados e IA": "Python, web, data and AI",
+  "Júnior ou estágio": "Junior role or internship",
+  "Sobre mim": "About me",
+  "Sou estudante de Engenharia de Software e atuo com avaliação e treinamento de modelos de Inteligência Artificial, com interesse em desenvolver soluções que conectem software e IA aplicada. Minha trajetória inclui formação técnica, experiência internacional em Luxemburgo e projetos acadêmicos e pessoais em diferentes áreas da tecnologia, sempre buscando evoluir como desenvolvedor e enfrentar problemas cada vez mais complexos.": "I am a Software Engineering student working with the evaluation and training of Artificial Intelligence models, with an interest in developing solutions that connect software and applied AI. My background includes technical education, international experience in Luxembourg, and academic and personal projects across different areas of technology, always seeking to grow as a developer and take on increasingly complex problems.",
+  "Sou estudante de Engenharia de Software e gosto de entender como as coisas funcionam para transformar ideias em projetos reais. Minha formação técnica e as experiências que vivi no Brasil e em Luxemburgo fortaleceram meu interesse por tecnologia e resolução de problemas. Hoje, desenvolvo projetos de front-end, back-end, dados e inteligência artificial, sempre com vontade de aprender e evoluir a cada desafio.": "I am a Software Engineering student who enjoys understanding how things work and turning ideas into real projects. My technical background and the experiences I had in Brazil and Luxembourg strengthened my interest in technology and problem-solving. Today, I build front-end, back-end, data and artificial intelligence projects, always looking to learn and grow with every challenge.",
+  "Combino formação em Engenharia de Software, base técnica e experiência prática no Brasil e em Luxemburgo. Desenvolvo soluções de ponta a ponta — de interfaces e APIs à análise de dados e aplicações com inteligência artificial — sempre buscando compreender o problema antes de escolher a tecnologia.": "I combine a Software Engineering education, a technical background and hands-on experience in Brazil and Luxembourg. I develop end-to-end solutions — from interfaces and APIs to data analysis and artificial intelligence applications — always seeking to understand the problem before choosing the technology.",
+  "Projetos públicos no GitHub": "Public GitHub projects",
+  "Contagem atualizada automaticamente a partir do meu perfil público.": "Count updated automatically from my public profile.",
+  "Front-end": "Front-end",
+  "Interfaces web": "Web interfaces",
+  "Criação de interfaces responsivas com HTML, CSS, JavaScript e integração com APIs.": "Responsive interfaces built with HTML, CSS, JavaScript and API integration.",
+  "Back-end": "Back-end",
+  "APIs e aplicações": "APIs and applications",
+  "Desenvolvimento com Python, Flask, Django REST Framework, Node.js e Express.": "Development with Python, Flask, Django REST Framework, Node.js and Express.",
+  "Dados": "Data",
+  "Bancos e análise": "Databases and analysis",
+  "Modelagem e consultas com SQL, SQLite e MySQL, além de NumPy, Excel e Power BI.": "Data modeling and queries with SQL, SQLite and MySQL, plus NumPy, Excel and Power BI.",
+  "LLMs, RAG e visão computacional": "LLMs, RAG and computer vision",
+  "Criação e avaliação de soluções com LLMs, RAG, embeddings, OpenCV e modelos locais.": "Development and evaluation of solutions using LLMs, RAG, embeddings, OpenCV and local models.",
+  "DevOps & Automação": "DevOps & Automation",
+  "Entrega e fluxos de trabalho": "Delivery and workflows",
+  "Versionamento com Git/GitHub, ambientes com Docker e automações com n8n e Arduino.": "Version control with Git/GitHub, Docker environments and automation using n8n and Arduino.",
+  "Minha trajetória combina desenvolvimento de software, suporte técnico e experiências práticas no Brasil e em Luxemburgo. Gosto de compreender o problema antes de escolher a tecnologia.": "My background combines software development, technical support and hands-on experience in Brazil and Luxembourg. I like to understand the problem before choosing the technology.",
+  "Hoje, direciono meus estudos para aplicações web, APIs, dados, automação e inteligência artificial aplicada.": "Today, I focus my studies on web applications, APIs, data, automation and applied artificial intelligence.",
+  "Projetos em web, API REST, visão computacional, dados e automação com Arduino.": "Projects involving web development, REST APIs, computer vision, data and Arduino automation.",
+  "Base técnica principal": "Core technical foundation",
+  "Desenvolvimento de projetos com Flask, Django REST Framework, OpenCV, NumPy e automações.": "Project development with Flask, Django REST Framework, OpenCV, NumPy and automation.",
+  "Banco de dados e organização de dados": "Databases and data organization",
+  "Criação de consultas, estruturação de registros e uso em projetos com SQLite/MySQL.": "Query creation, record structuring and use of SQLite/MySQL in projects.",
+  "Web e APIs": "Web and APIs",
+  "Desenvolvimento de aplicações web": "Web application development",
+  "Projetos com HTML, CSS, JavaScript, Flask, Django REST Framework e integração com APIs.": "Projects with HTML, CSS, JavaScript, Flask, Django REST Framework and API integration.",
+  "Ambiente e versionamento": "Environment and version control",
+  "Uso de Docker para padronização de ambiente e Git/GitHub para controle de versão dos projetos.": "Docker for consistent environments and Git/GitHub for project version control.",
+  "IA aplicada": "Applied AI",
+  "Interesse e apoio ao desenvolvimento": "Development focus and support",
+  "Uso de ferramentas de IA para prototipação, organização de ideias, revisão de código e documentação.": "Use of AI tools for prototyping, organizing ideas, code review and documentation.",
+  "2026 - Atual": "2026 - Present",
+  "Avaliação de modelos de Inteligência Artificial por meio de testes estruturados.": "Evaluation of Artificial Intelligence models through structured testing.",
+  "Análise da qualidade, correção e relevância das respostas geradas.": "Analysis of the quality, correctness and relevance of generated responses.",
+  "Verificação do cumprimento de diretrizes e critérios específicos de avaliação.": "Verification of compliance with guidelines and specific evaluation criteria.",
+  "Comparação do comportamento dos modelos em tarefas envolvendo texto, código e segurança.": "Comparison of model behavior in tasks involving text, code and safety.",
+  "Identificação de erros, riscos e problemas de segurança nas respostas geradas pelos modelos.": "Identification of errors, risks and safety issues in model-generated responses.",
+  "Registro dos resultados para apoiar melhorias na qualidade e confiabilidade dos modelos.": "Documentation of results to support improvements in model quality and reliability.",
+  "Estagiário Técnico de Engenharia": "Technical Engineering Intern",
+  "Agosto de 2019": "August 2019",
+  "Luxemburgo": "Luxembourg",
+  "Apoio às atividades técnicas de um escritório de engenharia.": "Support for the technical activities of an engineering office.",
+  "Organização e revisão de documentos e projetos técnicos.": "Organization and review of technical documents and projects.",
+  "Realização de verificações, identificação de inconsistências e suporte às demandas da equipe.": "Technical checks, identification of inconsistencies and support for team requests.",
+  "Análise técnica, resolução de problemas e cumprimento de procedimentos.": "Technical analysis, problem solving and compliance with procedures.",
+  "Suporte técnico": "Technical Support",
+  "Contern, Luxemburgo": "Contern, Luxembourg",
+  "Atendimento, suporte técnico e orientação básica a usuários.": "User assistance, technical support and basic guidance.",
+  "Diagnóstico inicial de problemas relacionados à conectividade, dispositivos e equipamentos.": "Initial diagnosis of connectivity, device and equipment issues.",
+  "Apoio na resolução de falhas de rede, internet e funcionamento de computadores.": "Support in resolving network, internet and computer operation issues.",
+  "Manutenção preventiva, troubleshooting e encaminhamento de demandas técnicas quando necessário.": "Preventive maintenance, troubleshooting and escalation of technical requests when necessary.",
+  "Ver no GitHub": "View on GitHub",
+  "Agente de programação executado pelo terminal, capaz de interagir com um LLM e utilizar ferramentas para ler arquivos, modificar código e executar comandos no projeto através de tool calling.": "Terminal-based coding agent that interacts with an LLM and uses tools to read files, modify code and execute project commands through tool calling.",
+  "Integração com modelos compatíveis com a API da OpenAI via OpenRouter.": "Integration with OpenAI API-compatible models through OpenRouter.",
+  "Leitura e edição de arquivos limitadas ao diretório do projeto.": "File reading and editing restricted to the project directory.",
+  "Execução iterativa de comandos Bash por meio de tool calling.": "Iterative Bash command execution through tool calling.",
+  "API de perguntas e respostas sobre documentos com RAG. Processa arquivos PDF e TXT, gera embeddings, realiza busca vetorial por similaridade e retorna as fontes utilizadas pelo LLM.": "Document question-answering API using RAG. It processes PDF and TXT files, generates embeddings, performs vector similarity search and returns the sources used by the LLM.",
+  "Processamento de documentos PDF e TXT com divisão em chunks.": "PDF and TXT processing with content chunking.",
+  "Geração de embeddings e recuperação de contexto por busca vetorial.": "Embedding generation and context retrieval through vector search.",
+  "Respostas acompanhadas das fontes utilizadas pelo modelo.": "Responses include the sources used by the model.",
+  "PROJETO EXTENSIONISTA": "EXTENSION PROJECT",
+  "Sistema Inteligente de Presença Facial": "Intelligent Facial Attendance System",
+  "Projeto extensionista": "University Extension Project",
+  "Sistema web para controle automático de presença em sala de aula utilizando reconhecimento facial. Inclui cadastro de alunos, captura de rosto, reconhecimento em tempo real, dashboard, relatórios e exportação de dados.": "Web system for automated classroom attendance using facial recognition. It includes student registration, face capture, real-time recognition, a dashboard, reports and data export.",
+  "API REST para gerenciamento de seleções e jogadores da Copa do Mundo de 2026, com modelagem de dados, endpoints CRUD, persistência, testes de API e execução em ambiente conteinerizado.": "REST API for managing 2026 World Cup national teams and players, with data modeling, CRUD endpoints, persistence, API testing and containerized execution.",
+  "Aplicação back-end para organização de uma biblioteca pessoal de jogos, permitindo cadastrar nome, desenvolvedora, gênero e status, além de consultar e filtrar registros através de endpoints da API.": "Back-end application for organizing a personal game library, allowing users to register names, developers, genres and statuses, and query or filter records through API endpoints.",
+  "Ver outros projetos": "View other projects",
+  "Outros projetos": "Other projects",
+  "Acesse meu perfil no GitHub para conhecer outros projetos, estudos práticos e experimentos desenvolvidos durante minha formação em software e inteligência artificial.": "Visit my GitHub profile to explore other projects, practical studies and experiments developed throughout my software and artificial intelligence training.",
+  "IA": "AI",
+  "Linguagens": "Languages",
+  "IA, LLMs e RAG": "AI, LLMs and RAG",
+  "Backend e APIs": "Backend and APIs",
+  "Dados e bancos de dados": "Data and databases",
+  "Dados relacionais": "Relational data",
+  "Ferramentas de IA": "AI tools",
+  "Modelos locais": "Local models",
+  "Desenvolvimento e qualidade": "Development and quality",
+  "Automação, IoT e visão computacional": "Automation, IoT and computer vision",
+  "Sensores DHT": "DHT sensors",
+  "Servomotor": "Servo motor",
+  "Suporte, sistemas e segurança": "Support, systems and security",
+  "Manutenção de hardware": "Hardware maintenance",
+  "Diagnóstico de computadores": "Computer diagnostics",
+  "Redes": "Networking",
+  "Fundamentos de cibersegurança": "Cybersecurity fundamentals",
+  "Idiomas": "Languages",
+  "Português - Nativo": "Portuguese - Native",
+  "Francês - Avançado (B2)": "French - Advanced (B2)",
+  "Inglês - Intermediário": "English - Intermediate",
+  "Espanhol - Básico": "Spanish - Basic",
+  "Vamos construir algo juntos?": "Let's build something together?",
+  "Aberto a oportunidades júnior, estágio e projetos práticos em desenvolvimento web, dados, automação e suporte técnico.": "Open to junior roles, internships and hands-on projects in web development, data, automation and technical support.",
+  "Principal": "Primary",
+  "Alternativo": "Alternative",
+  "Projetado e desenvolvido por Enzo Cristopher Oliveira Bittencourt.": "Designed and developed by Enzo Cristopher Oliveira Bittencourt.",
+  "Projetado e desenvolvido por": "Designed and developed by",
+  "Imagem do projeto": "Project image",
+  "Fechar imagem ampliada": "Close enlarged image",
+  "Ampliar imagem": "Zoom image",
+  "Mudar o idioma do site para inglês": "Switch site language to English",
+  "Mudar para inglês": "Switch to English",
+  "Navegação principal": "Main navigation",
+  "Voltar ao início": "Back to top",
+  "Abrir menu": "Open menu",
+  "Fechar menu": "Close menu",
+  "Links profissionais": "Professional links",
+  "Ações principais": "Main actions",
+  "Resumo rápido": "Quick summary",
+  "E-mails de contato": "Contact emails",
+  "Retrato de Enzo Cristopher Oliveira Bittencourt": "Portrait of Enzo Cristopher Oliveira Bittencourt",
+  "Tela do Sistema Inteligente de Presença Facial.": "Screenshot of the Intelligent Facial Attendance System."
+});
+
+let currentLanguage = "pt";
+let translationTextNodes = [];
+let translationAttributes = [];
+let translationRequestId = 0;
+const automaticTranslationCache = new Map();
+const visitorStorageKeys = Object.freeze({
+  name: "portfolio-visitor-name",
+  introSeen: "portfolio-visitor-intro-seen",
+});
+let visitorName = "";
+let visitorIntroSeen = false;
+let visitorIsReturning = false;
+let visitorIntroEditMode = false;
+let visitorPreviousFocus = null;
+let visitorIntroTimer = 0;
 
 const $ = (selector) => document.querySelector(selector);
 
 function setText(selector, text) {
   const element = $(selector);
   if (element) element.textContent = text;
+}
+
+function translateValue(value) {
+  if (englishTranslations[value]) return englishTranslations[value];
+
+  if (value.startsWith("Ampliar imagem do projeto ")) {
+    return `Zoom image for ${translateValue(value.replace("Ampliar imagem do projeto ", ""))}`;
+  }
+
+  if (value.startsWith("Imagem do projeto ")) {
+    return `Image for ${translateValue(value.replace("Imagem do projeto ", ""))}`;
+  }
+
+  return value;
+}
+
+function localized(portuguese, english) {
+  return currentLanguage === "en" ? english : portuguese;
+}
+
+function preserveTextSpacing(original, translated) {
+  const leading = original.match(/^\s*/)?.[0] || "";
+  const trailing = original.match(/\s*$/)?.[0] || "";
+  return `${leading}${translated}${trailing}`;
+}
+
+function loadVisitorState() {
+  try {
+    visitorName = sanitizeVisitorName(window.localStorage.getItem(visitorStorageKeys.name) || "");
+    visitorIntroSeen = window.localStorage.getItem(visitorStorageKeys.introSeen) === "true";
+  } catch (_) {
+    visitorName = "";
+    visitorIntroSeen = false;
+  }
+
+  visitorIsReturning = Boolean(visitorName && visitorIntroSeen);
+}
+
+function sanitizeVisitorName(value) {
+  return [...String(value || "").trim().replace(/\s+/g, " ")].slice(0, 30).join("");
+}
+
+function saveVisitorState() {
+  try {
+    window.localStorage.setItem(visitorStorageKeys.introSeen, "true");
+    if (visitorName) {
+      window.localStorage.setItem(visitorStorageKeys.name, visitorName);
+    } else {
+      window.localStorage.removeItem(visitorStorageKeys.name);
+    }
+  } catch (_) {
+    // A personalização continua funcionando durante a visita atual.
+  }
+}
+
+function setPersonalizedText(element, text, highlightedVisitorName = "") {
+  if (!element) return;
+  const visitorNameIndex = highlightedVisitorName ? text.indexOf(highlightedVisitorName) : -1;
+  if (visitorNameIndex >= 0) {
+    const visitorNameHighlight = document.createElement("span");
+    visitorNameHighlight.className = "visitor-name-accent";
+    visitorNameHighlight.textContent = highlightedVisitorName;
+    element.replaceChildren(
+      document.createTextNode(text.slice(0, visitorNameIndex)),
+      visitorNameHighlight,
+      document.createTextNode(text.slice(visitorNameIndex + highlightedVisitorName.length))
+    );
+  } else {
+    element.textContent = text;
+  }
+}
+
+function setHeroPresentation(welcomeText, isEnglish, highlightedVisitorName = "") {
+  const heroGreeting = $("#heroGreeting");
+  if (!heroGreeting) return;
+
+  const welcome = document.createElement("span");
+  welcome.className = "hero-welcome";
+  setPersonalizedText(welcome, welcomeText, highlightedVisitorName);
+
+  const identity = document.createElement("span");
+  identity.className = "hero-identity";
+
+  const fullName = document.createElement("strong");
+  fullName.className = "hero-full-name";
+  ["Enzo", "Cristopher", "Oliveira", "Bittencourt"].forEach((namePart, index) => {
+    if (index) fullName.append(document.createTextNode(" "));
+    const initial = document.createElement("span");
+    initial.className = "hero-name-initial";
+    initial.textContent = namePart[0];
+    fullName.append(initial, document.createTextNode(namePart.slice(1)));
+  });
+
+  const alias = document.createElement("span");
+  alias.className = "hero-alias";
+  alias.textContent = "ECOB";
+
+  identity.append(
+    document.createTextNode(isEnglish ? "My name is " : "Meu nome é "),
+    fullName,
+    document.createTextNode(isEnglish ? ", but you can also call me " : ", mas você também pode me chamar de "),
+    alias,
+    document.createTextNode(".")
+  );
+
+  heroGreeting.replaceChildren(welcome, identity);
+}
+
+function updatePersonalizedCopy() {
+  const aboutIntro = $("#aboutPersonalIntro");
+  const experienceIntro = $("#experiencePersonalIntro");
+  const projectsIntro = $("#projectsPersonalIntro");
+  const skillsIntro = $("#skillsPersonalIntro");
+  const contactTitle = $("#contact-title");
+  const farewell = $("#visitorFarewell");
+  const settings = $("#visitorSettings");
+  const isEnglish = currentLanguage === "en";
+
+  if (visitorName) {
+    const welcomeText = isEnglish
+      ? visitorIsReturning
+        ? `Welcome back, ${visitorName}.`
+        : `Hi, ${visitorName}.`
+      : visitorIsReturning
+        ? `Que bom ter você de volta, ${visitorName}.`
+        : `Olá, ${visitorName}.`;
+
+    setHeroPresentation(welcomeText, isEnglish, visitorName);
+    setPersonalizedText(
+      aboutIntro,
+      isEnglish
+        ? `So, ${visitorName}, to start, I would like to tell you a little about my path in Software Engineering and artificial intelligence.`
+        : `Então, ${visitorName}, para começar, quero contar um pouco sobre minha trajetória em Engenharia de Software e inteligência artificial.`,
+      visitorName
+    );
+    setPersonalizedText(
+      experienceIntro,
+      isEnglish
+        ? `${visitorName}, throughout my journey, I have built experience across technology, engineering and artificial intelligence.`
+        : `${visitorName}, ao longo da minha trajetória, reuni experiências em tecnologia, engenharia e inteligência artificial.`,
+      visitorName
+    );
+    setPersonalizedText(
+      projectsIntro,
+      isEnglish
+        ? `Here are some projects I built throughout my studies. If you would like, ${visitorName}, you can open the GitHub links to explore the details.`
+        : `Aqui estão alguns projetos que construí durante minha formação. Se quiser, ${visitorName}, você pode acessar os links do GitHub para conhecer os detalhes.`,
+      visitorName
+    );
+    setPersonalizedText(
+      skillsIntro,
+      isEnglish
+        ? `${visitorName}, these are the technical skills and languages I have been developing.`
+        : `${visitorName}, estas são as habilidades técnicas e os idiomas que venho desenvolvendo.`,
+      visitorName
+    );
+    setPersonalizedText(
+      contactTitle,
+      isEnglish ? `Shall we build something together, ${visitorName}?` : `Vamos construir algo juntos, ${visitorName}?`,
+      visitorName
+    );
+    setPersonalizedText(
+      farewell,
+      isEnglish ? `Thanks for visiting, ${visitorName}.` : `Obrigado pela visita, ${visitorName}.`,
+      visitorName
+    );
+    settings.textContent = isEnglish ? "Change name" : "Alterar nome";
+    return;
+  }
+
+  setHeroPresentation(isEnglish ? "Hello." : "Olá.", isEnglish);
+  setPersonalizedText(
+    aboutIntro,
+    isEnglish
+      ? "To start, I would like to tell you a little about my path in Software Engineering and artificial intelligence."
+      : "Para começar, quero contar um pouco sobre minha trajetória em Engenharia de Software e inteligência artificial."
+  );
+  setPersonalizedText(
+    experienceIntro,
+    isEnglish
+      ? "Throughout my journey, I have built experience across technology, engineering and artificial intelligence."
+      : "Ao longo da minha trajetória, reuni experiências em tecnologia, engenharia e inteligência artificial."
+  );
+  setPersonalizedText(
+    projectsIntro,
+    isEnglish
+      ? "Here are some projects I built throughout my studies. You can open the GitHub links to explore the details."
+      : "Aqui estão alguns projetos que construí durante minha formação. Você pode acessar os links do GitHub para conhecer os detalhes."
+  );
+  setPersonalizedText(
+    skillsIntro,
+    isEnglish
+      ? "These are the technical skills and languages I have been developing."
+      : "Estas são as habilidades técnicas e os idiomas que venho desenvolvendo."
+  );
+  setPersonalizedText(contactTitle, isEnglish ? "Shall we build something together?" : "Vamos construir algo juntos?");
+  setPersonalizedText(farewell, isEnglish ? "Thanks for visiting." : "Obrigado pela visita.");
+  settings.textContent = isEnglish ? "Personalize visit" : "Personalizar visita";
+}
+
+function updateVisitorIntroLanguage() {
+  const intro = $("#visitorIntro");
+  if (!intro) return;
+
+  const isEnglish = currentLanguage === "en";
+  const text = isEnglish
+    ? {
+        kicker: "// a quick introduction",
+        title: visitorIntroEditMode ? "What should I call you?" : "Before we begin, what should I call you?",
+        description: visitorIntroEditMode
+          ? "You can update the name used during your visit. It stays only in this browser."
+          : "This simply makes your visit a little more personal. Your name stays only in this browser.",
+        label: "Enter your name",
+        placeholder: "Enter your name",
+        submit: visitorIntroEditMode ? "Save" : "Enter",
+        hint: "Up to 30 characters.",
+        skip: visitorIntroEditMode ? "Close" : "Continue without sharing your name",
+        remove: "Remove saved name",
+        language: "Choose language",
+      }
+    : {
+        kicker: "// uma pequena apresentação",
+        title: visitorIntroEditMode ? "Como posso te chamar?" : "Antes de começar, como posso te chamar?",
+        description: visitorIntroEditMode
+          ? "Você pode atualizar o nome usado durante a visita. Ele continua somente neste navegador."
+          : "É só para deixar sua visita um pouco mais pessoal. Seu nome fica somente neste navegador.",
+        label: "Digite seu nome",
+        placeholder: "Digite seu nome",
+        submit: visitorIntroEditMode ? "Salvar" : "Entrar",
+        hint: "No máximo 30 caracteres.",
+        skip: visitorIntroEditMode ? "Fechar" : "Continuar sem informar o nome",
+        remove: "Remover nome salvo",
+        language: "Escolha o idioma",
+      };
+
+  setText("#visitorIntroKicker", text.kicker);
+  setText("#visitorIntroTitle", text.title);
+  setText("#visitorIntroDescription", text.description);
+  setText("#visitorNameLabel", text.label);
+  setText("#visitorSubmit", text.submit);
+  setText("#visitorNameHint", text.hint);
+  setText("#visitorSkip", text.skip);
+  setText("#visitorRemoveName", text.remove);
+  $("#visitorNameInput").placeholder = text.placeholder;
+  $("#introLanguageChoice").setAttribute("aria-label", text.language);
+
+  intro.querySelectorAll("[data-intro-language]").forEach((button) => {
+    const isActive = button.dataset.introLanguage === currentLanguage;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function visitorAnimationDelay(milliseconds) {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 30 : milliseconds;
+}
+
+function clearVisitorError() {
+  const input = $("#visitorNameInput");
+  input.removeAttribute("aria-invalid");
+  setText("#visitorNameError", "");
+}
+
+function openVisitorIntro(editMode = false) {
+  const intro = $("#visitorIntro");
+  const input = $("#visitorNameInput");
+  const content = $("#visitorIntroContent");
+  const welcome = $("#visitorIntroWelcome");
+
+  window.clearTimeout(visitorIntroTimer);
+  visitorIntroEditMode = editMode;
+  visitorPreviousFocus = document.activeElement;
+  input.value = editMode ? visitorName : "";
+  clearVisitorError();
+  content.hidden = false;
+  content.classList.remove("is-confirming");
+  welcome.hidden = true;
+  $("#visitorRemoveName").hidden = !(editMode && visitorName);
+  updateVisitorIntroLanguage();
+
+  intro.hidden = false;
+  intro.classList.remove("is-closing");
+  document.body.classList.add("visitor-intro-open");
+  window.requestAnimationFrame(() => {
+    intro.classList.add("is-visible");
+    window.setTimeout(() => input.focus(), visitorAnimationDelay(120));
+  });
+}
+
+function closeVisitorIntro() {
+  const intro = $("#visitorIntro");
+  if (intro.hidden) return;
+
+  intro.classList.add("is-closing");
+  intro.classList.remove("is-visible");
+  document.body.classList.remove("visitor-intro-open");
+
+  visitorIntroTimer = window.setTimeout(() => {
+    intro.hidden = true;
+    intro.classList.remove("is-closing");
+    $("#visitorIntroContent").hidden = false;
+    $("#visitorIntroContent").classList.remove("is-confirming");
+    $("#visitorIntroWelcome").hidden = true;
+    if (visitorIntroEditMode && visitorPreviousFocus?.focus) visitorPreviousFocus.focus();
+    visitorIntroEditMode = false;
+  }, visitorAnimationDelay(280));
+}
+
+function continueWithoutVisitorName() {
+  if (visitorIntroEditMode) {
+    closeVisitorIntro();
+    return;
+  }
+
+  visitorName = "";
+  visitorIntroSeen = true;
+  visitorIsReturning = false;
+  saveVisitorState();
+  updatePersonalizedCopy();
+  closeVisitorIntro();
+}
+
+function showVisitorWelcome(name) {
+  const content = $("#visitorIntroContent");
+  const welcome = $("#visitorIntroWelcome");
+
+  visitorName = name;
+  visitorIntroSeen = true;
+  visitorIsReturning = false;
+  saveVisitorState();
+  updatePersonalizedCopy();
+
+  content.classList.add("is-confirming");
+  setText("#visitorIntroWelcome", currentLanguage === "en" ? `Hello, ${name}.` : `Olá, ${name}.`);
+
+  window.setTimeout(() => {
+    content.hidden = true;
+    welcome.hidden = false;
+  }, visitorAnimationDelay(190));
+
+  visitorIntroTimer = window.setTimeout(() => {
+    closeVisitorIntro();
+  }, visitorAnimationDelay(1000));
+}
+
+function submitVisitorName(event) {
+  event.preventDefault();
+  const input = $("#visitorNameInput");
+  const name = sanitizeVisitorName(input.value);
+  input.value = name;
+
+  if (!name || !/\p{L}/u.test(name)) {
+    input.setAttribute("aria-invalid", "true");
+    setText(
+      "#visitorNameError",
+      currentLanguage === "en" ? "Please enter a valid name." : "Digite um nome válido."
+    );
+    input.focus();
+    return;
+  }
+
+  clearVisitorError();
+  showVisitorWelcome(name);
+}
+
+function removeVisitorName() {
+  visitorName = "";
+  visitorIntroSeen = true;
+  visitorIsReturning = false;
+  saveVisitorState();
+  updatePersonalizedCopy();
+  closeVisitorIntro();
+}
+
+function trapVisitorIntroFocus(event) {
+  const intro = $("#visitorIntro");
+  if (intro.hidden) return;
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+    continueWithoutVisitorName();
+    return;
+  }
+
+  if (event.key !== "Tab") return;
+  const focusable = [...intro.querySelectorAll("button:not([hidden]), input:not([disabled])")]
+    .filter((element) => element.offsetParent !== null);
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function setupVisitorExperience() {
+  $("#visitorNameForm").addEventListener("submit", submitVisitorName);
+  $("#visitorNameInput").addEventListener("input", clearVisitorError);
+  $("#visitorSkip").addEventListener("click", continueWithoutVisitorName);
+  $("#visitorRemoveName").addEventListener("click", removeVisitorName);
+  $("#visitorSettings").addEventListener("click", () => openVisitorIntro(true));
+  $("#visitorIntro").addEventListener("keydown", trapVisitorIntroFocus);
+
+  $("#visitorIntro").querySelectorAll("[data-intro-language]").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyLanguage(button.dataset.introLanguage);
+      $("#visitorNameInput").focus();
+    });
+  });
+
+  if (!visitorIntroSeen) {
+    window.setTimeout(() => openVisitorIntro(false), visitorAnimationDelay(90));
+  }
+}
+
+function shouldTranslateAutomatically(value) {
+  if (!value || englishTranslations[value] || /^\d[\d\s./–—-]*$/.test(value)) return false;
+  if (/^(?:https?:\/\/|mailto:|[\w.+-]+@[\w.-]+\.)/i.test(value)) return false;
+
+  return /[áàâãéêíóôõúç]/i.test(value)
+    || /\b(?:a|as|o|os|de|da|das|do|dos|em|para|por|com|sem|uma?|meu|minha|sou|hoje|projeto|projetos|desenvolvimento|experiência|tecnologia|dados)\b/i.test(value);
+}
+
+function splitTranslationText(value, maximumBytes = 450) {
+  const chunks = [];
+  let current = "";
+
+  value.split(/\s+/).forEach((word) => {
+    const candidate = current ? `${current} ${word}` : word;
+    if (new TextEncoder().encode(candidate).length > maximumBytes && current) {
+      chunks.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  });
+
+  if (current) chunks.push(current);
+  return chunks;
+}
+
+function decodeTranslatedText(value) {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = value;
+  return textarea.value;
+}
+
+async function requestAutomaticTranslation(value) {
+  if (automaticTranslationCache.has(value)) return automaticTranslationCache.get(value);
+
+  const translatedChunks = [];
+  for (const chunk of splitTranslationText(value)) {
+    const url = new URL("https://api.mymemory.translated.net/get");
+    url.searchParams.set("q", chunk);
+    url.searchParams.set("langpair", "pt-BR|en");
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Translation API: ${response.status}`);
+
+    const result = await response.json();
+    const translated = result?.responseData?.translatedText;
+    if (!translated) throw new Error("Translation API returned no text");
+    translatedChunks.push(decodeTranslatedText(translated));
+  }
+
+  const translation = translatedChunks.join(" ");
+  automaticTranslationCache.set(value, translation);
+  return translation;
+}
+
+async function applyAutomaticTranslations(requestId) {
+  const toggle = $("#languageToggle");
+  const textEntries = translationTextNodes.filter(({ original }) => shouldTranslateAutomatically(original.trim()));
+  const attributeEntries = translationAttributes.filter(({ original }) => shouldTranslateAutomatically(original));
+
+  if (!textEntries.length && !attributeEntries.length) return;
+  toggle.setAttribute("aria-busy", "true");
+
+  await Promise.allSettled([
+    ...textEntries.map(async ({ node, original }) => {
+      const translated = await requestAutomaticTranslation(original.trim());
+      if (currentLanguage === "en" && requestId === translationRequestId && node.isConnected) {
+        node.nodeValue = preserveTextSpacing(original, translated);
+      }
+    }),
+    ...attributeEntries.map(async ({ element, attribute, original }) => {
+      const translated = await requestAutomaticTranslation(original);
+      if (currentLanguage === "en" && requestId === translationRequestId && element.isConnected) {
+        element.setAttribute(attribute, translated);
+      }
+    }),
+  ]);
+
+  if (currentLanguage === "en" && requestId === translationRequestId) {
+    toggle.removeAttribute("aria-busy");
+  }
+}
+
+function applyLanguage(language, persist = true) {
+  currentLanguage = language === "en" ? "en" : "pt";
+  const requestId = ++translationRequestId;
+
+  translationTextNodes.forEach(({ node, original }) => {
+    const originalText = original.trim();
+    const value = currentLanguage === "en" ? translateValue(originalText) : originalText;
+    node.nodeValue = preserveTextSpacing(original, value);
+  });
+
+  translationAttributes.forEach(({ element, attribute, original }) => {
+    element.setAttribute(attribute, currentLanguage === "en" ? translateValue(original) : original);
+  });
+
+  document.documentElement.lang = currentLanguage === "en" ? "en" : "pt-BR";
+  document.title = currentLanguage === "en"
+    ? `${portfolio.name} | Software Engineering Student`
+    : `${portfolio.name} | ${portfolio.role}`;
+
+  const toggle = $("#languageToggle");
+  toggle.querySelector(".language-flag-pt")?.classList.toggle("is-active", currentLanguage === "pt");
+  toggle.querySelector(".language-flag-en")?.classList.toggle("is-active", currentLanguage === "en");
+  toggle.setAttribute(
+    "aria-label",
+    currentLanguage === "en" ? "Mudar o idioma do site para português" : "Mudar o idioma do site para inglês"
+  );
+  toggle.title = currentLanguage === "en" ? "Mudar para português" : "Mudar para inglês";
+  toggle.removeAttribute("aria-busy");
+  syncMenuState();
+  updatePersonalizedCopy();
+  updateVisitorIntroLanguage();
+
+  if (currentLanguage === "en") {
+    applyAutomaticTranslations(requestId);
+  }
+
+  if (persist) {
+    try {
+      window.localStorage.setItem("portfolio-language", currentLanguage);
+    } catch (_) {
+      // The language still works when storage is unavailable.
+    }
+  }
+}
+
+function setupLanguageToggle() {
+  const toggle = $("#languageToggle");
+
+  translationTextNodes = [...document.querySelectorAll("body *")]
+    .filter((element) => !element.matches("script, style, #languageToggle") && !element.closest("#languageToggle, [data-github-repo-count], #visitorIntro, [data-personalized-text]"))
+    .flatMap((element) =>
+      [...element.childNodes]
+        .filter((node) => node.nodeType === 3 && node.nodeValue.trim())
+        .map((node) => ({ node, original: node.nodeValue }))
+    );
+
+  translationAttributes = [...document.querySelectorAll("[aria-label], [title], img[alt]")]
+    .filter((element) => element !== toggle && !element.closest("#visitorIntro, [data-personalized-text]"))
+    .flatMap((element) =>
+      ["aria-label", "title", "alt"]
+        .filter((attribute) => element.hasAttribute(attribute))
+        .map((attribute) => ({ element, attribute, original: element.getAttribute(attribute) }))
+    );
+
+  toggle.addEventListener("click", () => {
+    applyLanguage(currentLanguage === "pt" ? "en" : "pt");
+  });
+
+  let savedLanguage = navigator.language?.toLowerCase().startsWith("en") ? "en" : "pt";
+  try {
+    savedLanguage = window.localStorage.getItem("portfolio-language") || savedLanguage;
+  } catch (_) {
+    // Mantém o idioma sugerido pelo navegador quando o armazenamento não está disponível.
+  }
+
+  applyLanguage(savedLanguage, false);
 }
 
 function getInitials(name) {
@@ -261,12 +971,31 @@ function renderFacts() {
     const card = document.createElement("article");
     card.className = "fact-card";
     card.innerHTML = `
-      <strong>${fact.value}</strong>
+      <strong${fact.githubRepoCount ? ' data-github-repo-count aria-live="polite"' : ""}>${fact.value}</strong>
       <h3>${fact.label}</h3>
       <span>${fact.text}</span>
     `;
     list.appendChild(card);
   });
+}
+
+async function updateGithubRepoCount() {
+  const counter = document.querySelector("[data-github-repo-count]");
+  if (!counter) return;
+
+  try {
+    const response = await fetch("https://api.github.com/users/ecob5", {
+      headers: { Accept: "application/vnd.github+json" },
+    });
+    if (!response.ok) throw new Error(`GitHub API: ${response.status}`);
+
+    const profile = await response.json();
+    if (Number.isInteger(profile.public_repos)) {
+      counter.textContent = String(profile.public_repos);
+    }
+  } catch {
+    // Mantém o valor de segurança exibido no HTML quando a API estiver indisponível.
+  }
 }
 
 function renderProjects() {
@@ -275,11 +1004,17 @@ function renderProjects() {
 
   portfolio.projects.forEach((project, index) => {
     const card = document.createElement("article");
-    card.className = "project-card";
+    card.className = project.featured ? "project-card project-card-featured" : "project-card";
 
     const tags = project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     const links = project.links
-      .map((link) => `<a class="project-github" href="${link.href || link.url}" target="_blank" rel="noreferrer">${link.label}</a>`)
+      .map(
+        (link) => `
+          <a class="project-github" href="${link.href || link.url}" target="_blank" rel="noopener noreferrer" aria-label="${link.label}: ${project.title}">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.6.1.8-.2.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg>
+            ${link.label} <span aria-hidden="true">↗</span>
+          </a>`
+      )
       .join("");
     const projectImage = project.image
       ? `
@@ -289,19 +1024,22 @@ function renderProjects() {
         </figure>
       `
       : "";
+    const highlights = project.highlights?.length
+      ? `<ul class="project-highlights">${project.highlights.map((item) => `<li>${item}</li>`).join("")}</ul>`
+      : "";
 
     card.innerHTML = `
       ${projectImage}
       <div class="project-topline">
+        <span class="project-type">${project.type}</span>
         <div class="project-actions">
-          <span class="project-number">${String(index + 1).padStart(2, "0")}</span>
           ${links}
         </div>
-        <span class="project-type">${project.type}</span>
       </div>
       <h3>${project.title}</h3>
       ${project.meta ? `<p class="project-meta">${project.meta}</p>` : ""}
       <p>${project.description}</p>
+      ${highlights}
       <div class="tag-row">${tags}</div>
     `;
 
@@ -321,14 +1059,14 @@ function getImageModal() {
   modal.setAttribute("aria-labelledby", "imageModalTitle");
   modal.hidden = true;
   modal.innerHTML = `
-    <button class="image-modal-backdrop" type="button" aria-label="Fechar imagem ampliada"></button>
+    <button class="image-modal-backdrop" type="button" aria-label="${localized("Fechar imagem ampliada", "Close enlarged image")}"></button>
     <div class="image-modal-panel">
       <div class="image-modal-header">
         <div>
-          <p>Imagem do projeto</p>
+          <p>${localized("Imagem do projeto", "Project image")}</p>
           <h3 id="imageModalTitle"></h3>
         </div>
-        <button class="image-modal-close" type="button" aria-label="Fechar imagem ampliada">X</button>
+        <button class="image-modal-close" type="button" aria-label="${localized("Fechar imagem ampliada", "Close enlarged image")}">X</button>
       </div>
       <img id="imageModalImg" src="" alt="">
     </div>
@@ -345,9 +1083,11 @@ function openImageModal(project) {
   const modal = getImageModal();
   const image = modal.querySelector("#imageModalImg");
 
-  setText("#imageModalTitle", project.title);
+  setText("#imageModalTitle", currentLanguage === "en" ? translateValue(project.title) : project.title);
   image.src = project.image;
-  image.alt = project.imageAlt || `Imagem ampliada do projeto ${project.title}`;
+  image.alt = currentLanguage === "en"
+    ? `Enlarged image for ${translateValue(project.title)}`
+    : project.imageAlt || `Imagem ampliada do projeto ${project.title}`;
 
   modal.hidden = false;
   document.body.classList.add("modal-open");
@@ -405,21 +1145,6 @@ function renderSkillGroups() {
   });
 }
 
-function renderLanguages() {
-  const grid = $("#languageGrid");
-  grid.innerHTML = "";
-
-  portfolio.languages.forEach((language) => {
-    const card = document.createElement("article");
-    card.className = "language-card";
-    card.innerHTML = `
-      <h3>${language.name}</h3>
-      <span>${language.level}</span>
-    `;
-    grid.appendChild(card);
-  });
-}
-
 function renderExperiences() {
   const grid = $("#experienceGrid");
   grid.innerHTML = "";
@@ -433,29 +1158,14 @@ function renderExperiences() {
     card.innerHTML = `
       <p class="experience-company">${experience.company}</p>
       <h3>${experience.role}</h3>
-      <p class="experience-location">${experience.location}</p>
+      <div class="experience-meta">
+        ${experience.period ? `<span>${experience.period}</span>` : ""}
+        ${experience.location ? `<span>${experience.location}</span>` : ""}
+      </div>
       <ul>${bullets}</ul>
     `;
 
     grid.appendChild(card);
-  });
-}
-
-function renderTimeline() {
-  const list = $("#timelineList");
-  list.innerHTML = "";
-
-  portfolio.timeline.forEach((item) => {
-    const row = document.createElement("article");
-    row.className = "timeline-item";
-    row.innerHTML = `
-      <time>${item.period}</time>
-      <div>
-        <h3>${item.title}</h3>
-        <p>${item.text}</p>
-      </div>
-    `;
-    list.appendChild(row);
   });
 }
 
@@ -544,15 +1254,15 @@ async function copyPrimaryEmail(event) {
   if (event) event.preventDefault();
   const trigger = event?.currentTarget;
   const originalLabel = trigger?.textContent;
-  setContactStatus(`Tentando copiar: ${portfolio.email}`);
-  if (trigger) trigger.textContent = "Copiando...";
+  setContactStatus(localized(`Tentando copiar: ${portfolio.email}`, `Trying to copy: ${portfolio.email}`));
+  if (trigger) trigger.textContent = localized("Copiando...", "Copying...");
 
   const copied = await clipboardCopy(portfolio.email);
 
   if (copied) {
-    setContactStatus(`E-mail copiado: ${portfolio.email}`);
+    setContactStatus(localized(`E-mail copiado: ${portfolio.email}`, `Email copied: ${portfolio.email}`));
     if (trigger) {
-      trigger.textContent = "E-mail copiado";
+      trigger.textContent = localized("E-mail copiado", "Email copied");
       window.setTimeout(() => {
         trigger.textContent = originalLabel;
       }, 2200);
@@ -560,7 +1270,12 @@ async function copyPrimaryEmail(event) {
     return;
   }
 
-  setContactStatus(`Não consegui copiar automaticamente. E-mail: ${portfolio.email}`);
+  setContactStatus(
+    localized(
+      `Não consegui copiar automaticamente. E-mail: ${portfolio.email}`,
+      `Automatic copy failed. Email: ${portfolio.email}`
+    )
+  );
   if (trigger) {
     trigger.textContent = portfolio.email;
     window.setTimeout(() => {
@@ -569,53 +1284,203 @@ async function copyPrimaryEmail(event) {
   }
 }
 
+function syncMenuState(forceOpen) {
+  const toggle = $(".nav-toggle");
+  const menu = $("#site-menu");
+  if (!toggle || !menu) return;
+
+  const isOpen = typeof forceOpen === "boolean" ? forceOpen : menu.classList.contains("is-open");
+  menu.classList.toggle("is-open", isOpen);
+  toggle.classList.toggle("is-open", isOpen);
+  toggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute(
+    "aria-label",
+    localized(isOpen ? "Fechar menu" : "Abrir menu", isOpen ? "Close menu" : "Open menu")
+  );
+  document.body.classList.toggle("menu-open", isOpen);
+}
+
 function setupMenu() {
   const toggle = $(".nav-toggle");
   const menu = $("#site-menu");
 
   toggle.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("menu-open", isOpen);
+    syncMenuState(!menu.classList.contains("is-open"));
   });
 
-  menu.querySelectorAll("a").forEach((link) => {
+  menu.querySelectorAll("a, #languageToggle").forEach((control) => {
+    control.addEventListener("click", () => syncMenuState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("is-open")) {
+      syncMenuState(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 720 && menu.classList.contains("is-open")) {
+      syncMenuState(false);
+    }
+  });
+
+  syncMenuState(false);
+}
+
+function setupHeroNavigationSwap() {
+  const header = $(".site-header");
+  const hero = $("#top");
+  const menu = $("#site-menu");
+  if (!header || !hero || !menu) return;
+
+  let heroIsVisible = null;
+
+  function updateHeaderNavigation() {
+    const headerHeight = header.getBoundingClientRect().height;
+    const heroRect = hero.getBoundingClientRect();
+    const isVisible = heroRect.bottom > headerHeight && heroRect.top < window.innerHeight;
+
+    if (isVisible === heroIsVisible) return;
+    heroIsVisible = isVisible;
+    header.classList.toggle("hero-in-view", isVisible);
+    menu.setAttribute("aria-hidden", String(isVisible));
+
+    if (isVisible && menu.classList.contains("is-open")) {
+      syncMenuState(false);
+    }
+  }
+
+  let scheduled = false;
+  function scheduleUpdate() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(() => {
+      updateHeaderNavigation();
+      scheduled = false;
+    });
+  }
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+  updateHeaderNavigation();
+}
+
+function setupSectionNavigation() {
+  const links = [...document.querySelectorAll('#site-menu a[href^="#"]')];
+  const sections = links
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  function setActiveSection(id) {
+    links.forEach((link) => {
+      const isActive = Boolean(id) && link.getAttribute("href") === `#${id}`;
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  let scheduled = false;
+  let navigationTarget = null;
+  let navigationTimer;
+
+  links.forEach((link) => {
     link.addEventListener("click", () => {
-      menu.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("menu-open");
+      navigationTarget = link.getAttribute("href").slice(1);
+      setActiveSection(navigationTarget);
+      window.clearTimeout(navigationTimer);
+      navigationTimer = window.setTimeout(() => {
+        navigationTarget = null;
+        updateActiveSection();
+      }, 1400);
     });
   });
+
+  function updateActiveSection() {
+    if (navigationTarget) {
+      setActiveSection(navigationTarget);
+      scheduled = false;
+      return;
+    }
+
+    const marker = window.innerHeight * 0.38;
+    let activeSection = null;
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= marker && rect.bottom > 0) activeSection = section;
+    });
+
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      activeSection = sections.at(-1);
+    }
+
+    setActiveSection(activeSection?.id);
+    scheduled = false;
+  }
+
+  function scheduleUpdate() {
+    if (scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(updateActiveSection);
+  }
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+  updateActiveSection();
+}
+
+function setupSectionReveal() {
+  const sections = [...document.querySelectorAll(".section, .contact")];
+
+  if (!("IntersectionObserver" in window)) {
+    sections.forEach((section) => section.classList.add("is-visible"));
+    return;
+  }
+
+  sections.forEach((section) => section.classList.add("section-reveal"));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  sections.forEach((section) => observer.observe(section));
 }
 
 function renderPortfolio() {
+  loadVisitorState();
   document.title = `${portfolio.name} | ${portfolio.role}`;
 
-  setText("#brandInitials", getInitials(portfolio.name));
-  setText("#brandName", portfolio.shortName || portfolio.name);
+  setText("#brandName", portfolio.name);
   setText("#availability", portfolio.availability);
-  setText("#hero-title", portfolio.headline);
   setText("#heroIntro", portfolio.intro);
-  setText("#focusArea", portfolio.focusArea);
-  setText("#jobTarget", portfolio.jobTarget);
   setText("#contactText", portfolio.contactText);
   setText("#footerName", portfolio.name);
   setText("#year", new Date().getFullYear());
 
-  const emailCta = $("#emailCta");
-  emailCta.href = "#contato";
-  emailCta.addEventListener("click", copyPrimaryEmail);
-
   renderFacts();
+  updateGithubRepoCount();
   renderProjects();
   renderExperiences();
   renderSkillGroups();
-  renderLanguages();
-  renderTimeline();
   renderContactEmails();
   renderContactLinks();
   setupProjectZoom();
   setupMenu();
+  setupHeroNavigationSwap();
+  setupSectionNavigation();
+  setupSectionReveal();
+  setupLanguageToggle();
+  setupVisitorExperience();
 }
 
 renderPortfolio();

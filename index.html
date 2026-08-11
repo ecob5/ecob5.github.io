@@ -4,146 +4,225 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfólio de Enzo Cristopher Oliveira Bittencourt, estudante de Engenharia de Software com foco em Python, dados, web e inteligência artificial">
+    <meta name="theme-color" content="#0a0b0e">
     <meta property="og:title" content="Enzo Cristopher Oliveira Bittencourt | Portfólio">
-    <meta property="og:description" content="Projetos, habilidades técnicas, cursos e contato profissional.">
+    <meta property="og:description" content="Projetos, experiências e habilidades em desenvolvimento de software.">
     <meta property="og:image" content="assets/portfolio-hero.png">
     <title>Enzo Cristopher Oliveira Bittencourt | Portfólio</title>
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=39">
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <section class="visitor-intro" id="visitorIntro" role="dialog" aria-modal="true" aria-labelledby="visitorIntroTitle" hidden>
+      <div class="visitor-intro-glow" aria-hidden="true"></div>
+      <div class="visitor-intro-panel">
+        <header class="visitor-intro-header">
+          <p class="visitor-intro-kicker" id="visitorIntroKicker">// uma pequena apresentação</p>
+          <div class="intro-language-choice" id="introLanguageChoice" role="group" aria-label="Escolha o idioma">
+            <button class="intro-language-option is-active" type="button" data-intro-language="pt" aria-pressed="true" aria-label="Português">
+              <svg aria-hidden="true" viewBox="0 0 28 20">
+                <rect width="28" height="20" fill="#009739"></rect>
+                <path d="M14 2 25 10 14 18 3 10Z" fill="#fedd00"></path>
+                <circle cx="14" cy="10" r="4.25" fill="#012169"></circle>
+                <path d="M10.4 9.2c2.5-.9 5.3-.5 7.4.8" fill="none" stroke="#fff" stroke-width=".7"></path>
+              </svg>
+              <span>PT</span>
+            </button>
+            <button class="intro-language-option" type="button" data-intro-language="en" aria-pressed="false" aria-label="English">
+              <svg aria-hidden="true" viewBox="0 0 28 20">
+                <rect width="28" height="20" fill="#012169"></rect>
+                <path d="M0 0 28 20M28 0 0 20" stroke="#fff" stroke-width="5"></path>
+                <path d="M0 0 28 20M28 0 0 20" stroke="#c8102e" stroke-width="2.4"></path>
+                <path d="M14 0v20M0 10h28" stroke="#fff" stroke-width="6"></path>
+                <path d="M14 0v20M0 10h28" stroke="#c8102e" stroke-width="3.2"></path>
+              </svg>
+              <span>EN</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="visitor-intro-content" id="visitorIntroContent">
+          <h2 id="visitorIntroTitle">Antes de começar, como posso te chamar?</h2>
+          <p id="visitorIntroDescription">É só para deixar sua visita um pouco mais pessoal. Seu nome fica somente neste navegador.</p>
+
+          <form class="visitor-name-form" id="visitorNameForm" novalidate>
+            <label class="visually-hidden" id="visitorNameLabel" for="visitorNameInput">Digite seu nome</label>
+            <div class="visitor-name-row">
+              <input id="visitorNameInput" name="visitor-name" type="text" maxlength="30" autocomplete="name" placeholder="Digite seu nome" aria-describedby="visitorNameHint visitorNameError">
+              <button class="button button-primary" id="visitorSubmit" type="submit">Entrar</button>
+            </div>
+            <p class="visitor-name-hint" id="visitorNameHint">No máximo 30 caracteres.</p>
+            <p class="visitor-name-error" id="visitorNameError" role="alert"></p>
+          </form>
+
+          <div class="visitor-intro-secondary-actions">
+            <button class="visitor-text-button" id="visitorSkip" type="button">Continuar sem informar o nome</button>
+            <button class="visitor-text-button visitor-remove-name" id="visitorRemoveName" type="button" hidden>Remover nome salvo</button>
+          </div>
+        </div>
+
+        <p class="visitor-intro-welcome" id="visitorIntroWelcome" role="status" aria-live="polite" hidden></p>
+      </div>
+    </section>
+
+    <header class="site-header hero-in-view">
       <nav class="nav" aria-label="Navegação principal">
         <a class="brand" href="#top" aria-label="Voltar ao início">
-          <span class="brand-mark" id="brandInitials">EB</span>
-          <span id="brandName">Enzo Bittencourt</span>
+          <span class="brand-mark" id="brandInitials" aria-label="ECOB">
+            <span class="brand-monogram" aria-hidden="true"><span>EC</span><span>OB</span></span>
+          </span>
+          <span class="brand-copy">
+            <strong id="brandName">Enzo Cristopher Oliveira Bittencourt</strong>
+            <small>software engineer</small>
+          </span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-links" id="site-menu">
-          <a href="#projetos">Projetos</a>
-          <a href="#experiencia">Experiência</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#idiomas">Idiomas</a>
-          <a href="#trajetoria">Trajetória</a>
-          <a href="#contato">Contato</a>
+        <div class="nav-controls">
+          <div class="header-section-links" id="site-menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+          </div>
+          <button class="language-toggle" id="languageToggle" type="button" aria-label="Mudar o idioma do site para inglês" title="Mudar para inglês">
+            <span class="language-flag language-flag-pt is-active" aria-hidden="true">
+              <svg viewBox="0 0 28 20" focusable="false">
+                <rect width="28" height="20" fill="#009739"></rect>
+                <path d="M14 2 25 10 14 18 3 10Z" fill="#fedd00"></path>
+                <circle cx="14" cy="10" r="4.25" fill="#012169"></circle>
+                <path d="M10.4 9.2c2.5-.9 5.3-.5 7.4.8" fill="none" stroke="#fff" stroke-width=".7"></path>
+              </svg>
+            </span>
+            <span class="language-divider" aria-hidden="true"></span>
+            <span class="language-flag language-flag-en" aria-hidden="true">
+              <svg viewBox="0 0 28 20" focusable="false">
+                <rect width="28" height="20" fill="#012169"></rect>
+                <path d="M0 0 28 20M28 0 0 20" stroke="#fff" stroke-width="5"></path>
+                <path d="M0 0 28 20M28 0 0 20" stroke="#c8102e" stroke-width="2.4"></path>
+                <path d="M14 0v20M0 10h28" stroke="#fff" stroke-width="6"></path>
+                <path d="M14 0v20M0 10h28" stroke="#c8102e" stroke-width="3.2"></path>
+              </svg>
+            </span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+    <aside class="side-rail side-rail-left" aria-label="Links profissionais">
+      <a class="social-icon-link" href="https://github.com/ecob5" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.6.1.8-.2.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"></path>
+        </svg>
+      </a>
+      <a class="social-icon-link" href="https://www.linkedin.com/in/enzo-cristopher-oliveira-bittencourt-4590231bb" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 1A2.2 2.2 0 1 0 3.5 5.4 2.2 2.2 0 0 0 3.5 1ZM22.3 13.9c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.2 2.3V7.8H9.1V22h3.6v-7c0-1.9.4-3.7 2.7-3.7s2.3 2.1 2.3 3.8V22h3.6l1-8.1Z"></path>
+        </svg>
+      </a>
+      <a class="social-icon-link" href="https://www.instagram.com/ecobittencourt/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.2" fill="none" stroke="currentColor" stroke-width="2"></rect>
+          <circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"></circle>
+          <circle cx="17.6" cy="6.5" r="1.2" fill="currentColor"></circle>
+        </svg>
+      </a>
+      <span></span>
+    </aside>
+
+    <aside class="side-rail side-rail-right" aria-label="E-mail">
+      <a href="mailto:cristopher@tuta.io">cristopher@tuta.io</a>
+      <span></span>
+    </aside>
+
+    <main id="conteudo">
+      <section class="hero" id="top" aria-labelledby="heroGreeting">
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow" id="availability">Disponível para oportunidades de estágio e júnior</p>
-          <h1 id="hero-title">Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial</h1>
-          <p class="hero-lede" id="heroIntro">
-            Sou um estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.
-          </p>
-
-          <div class="hero-actions" aria-label="Ações principais">
-            <a class="button button-primary" href="#projetos">
-              Ver projetos
-              <span aria-hidden="true">-&gt;</span>
-            </a>
-            <a class="button button-secondary" id="emailCta" href="#contato">Copiar e-mail</a>
-          </div>
-
-          <dl class="hero-meta" aria-label="Resumo rápido">
-            <div>
-              <dt>Foco</dt>
-              <dd id="focusArea">Python, web, dados e IA</dd>
-            </div>
-            <div>
-              <dt>Busco</dt>
-              <dd id="jobTarget">Júnior ou estágio</dd>
-            </div>
-          </dl>
+          <h1 class="hero-presentation" id="heroGreeting" data-personalized-text>
+            <span class="hero-welcome">Olá.</span>
+            <span class="hero-identity">Meu nome é <strong class="hero-full-name"><span class="hero-name-initial">E</span>nzo <span class="hero-name-initial">C</span>ristopher <span class="hero-name-initial">O</span>liveira <span class="hero-name-initial">B</span>ittencourt</strong>, mas você também pode me chamar de <span class="hero-alias">ECOB</span>.</span>
+          </h1>
+          <p class="hero-lede" id="heroIntro">Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, os projetos que venho construindo e como estou direcionando minha trajetória para software e inteligência artificial.</p>
+          <p class="hero-nav-question">Por onde você quer começar?</p>
+          <nav class="hero-section-links" aria-label="Navegação inicial">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+          </nav>
         </div>
 
-        <div class="hero-media" aria-label="Visual do portfolio">
-          <img src="assets/portfolio-hero.png" alt="Mesa de trabalho moderna com laptop, painéis de interface e cartões de projeto" width="1536" height="1024">
+        <div class="hero-signature">
+          <figure class="portrait-frame">
+            <img src="assets/portfolio-hero.png" alt="Retrato de Enzo Cristopher Oliveira Bittencourt" width="1536" height="2048">
+          </figure>
         </div>
       </section>
 
-      <section class="snapshot" aria-labelledby="snapshot-title">
-        <div class="section-heading">
-          <p class="section-kicker">Destaques</p>
-          <h2 id="snapshot-title">Conhecimentos e Projetos</h2>
+      <section class="section about" id="sobre" aria-labelledby="snapshot-title">
+        <div class="section-heading numbered-heading">
+          <h2 class="section-kicker" id="snapshot-title">Sobre mim</h2>
+        </div>
+        <p class="section-personal-intro" id="aboutPersonalIntro" data-personalized-text>Para começar, quero contar um pouco sobre minha trajetória em Engenharia de Software e inteligência artificial.</p>
+        <div class="about-intro">
+          <p>Sou estudante de Engenharia de Software e atuo com avaliação e treinamento de modelos de Inteligência Artificial, com interesse em desenvolver soluções que conectem software e IA aplicada. Minha trajetória inclui formação técnica, experiência internacional em Luxemburgo e projetos acadêmicos e pessoais em diferentes áreas da tecnologia, sempre buscando evoluir como desenvolvedor e enfrentar problemas cada vez mais complexos.</p>
         </div>
         <div class="snapshot-grid" id="factsList"></div>
       </section>
 
-      <section class="section" id="projetos" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="section-kicker">Projetos</p>
-          <h2 id="projects-title">Projetos acadêmicos e pessoais com foco em web, dados e automação</h2>
-        </div>
-        <div class="project-grid" id="projectGrid"></div>
-      </section>
-
       <section class="section" id="experiencia" aria-labelledby="experience-title">
-        <div class="section-heading">
-          <p class="section-kicker">Experiência</p>
-          <h2 id="experience-title">Vivência profissional</h2>
+        <div class="section-heading numbered-heading">
+          <h2 class="section-kicker" id="experience-title">Experiência</h2>
         </div>
+        <p class="section-personal-intro" id="experiencePersonalIntro" data-personalized-text>Ao longo da minha trajetória, reuni experiências em tecnologia, engenharia e inteligência artificial.</p>
         <div class="experience-grid" id="experienceGrid"></div>
       </section>
 
-      <section class="section section-band" id="habilidades" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="section-kicker">Habilidades</p>
-          <h2 id="skills-title">Linguagens, ferramentas e tecnologias</h2>
+      <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
+        <div class="section-heading numbered-heading">
+          <h2 class="section-kicker" id="projects-title">Projetos</h2>
         </div>
-        <div class="skills-layout">
-          <div>
-            <div class="skills-grid" id="skillsGrid"></div>
-          </div>
-        </div>
+        <p class="projects-personal-intro" id="projectsPersonalIntro" data-personalized-text>Aqui estão alguns projetos que construí durante minha formação. Você pode acessar os links do GitHub para conhecer os detalhes.</p>
+        <div class="project-grid" id="projectGrid"></div>
       </section>
 
-      <section class="section" id="idiomas" aria-labelledby="languages-title">
-        <div class="section-heading">
-          <p class="section-kicker">Idiomas</p>
-          <h2 id="languages-title">Idiomas que uso para estudo, comunicação e tecnologia</h2>
+      <section class="section" id="habilidades" aria-labelledby="skills-title">
+        <div class="section-heading numbered-heading">
+          <h2 class="section-kicker" id="skills-title">Habilidades</h2>
         </div>
-        <div class="language-grid" id="languageGrid"></div>
-      </section>
-
-      <section class="section" id="trajetoria" aria-labelledby="timeline-title">
-        <div class="section-heading">
-          <p class="section-kicker">Trajetória</p>
-          <h2 id="timeline-title">Experiências e estudos</h2>
-        </div>
-        <div class="timeline" id="timelineList"></div>
+        <p class="section-personal-intro" id="skillsPersonalIntro" data-personalized-text>Estas são as habilidades técnicas e os idiomas que venho desenvolvendo.</p>
+        <div class="skills-grid" id="skillsGrid"></div>
       </section>
 
       <section class="contact" id="contato" aria-labelledby="contact-title">
-        <div class="contact-copy">
-          <p class="section-kicker">Contato</p>
-          <h2 id="contact-title">Vamos conversar?</h2>
-          <p id="contactText">Estou aberto a oportunidades de estágio e projetos na área de tecnologia, principalmente em desenvolvimento web, dados, automação, suporte técnico e aplicações com Python.</p>
-          <div class="contact-emails" id="contactEmails" aria-label="E-mails de contato">
-            <span class="contact-emails-label">E-mails</span>
-            <div class="contact-email-list">
-              <span><span class="email-role">Principal</span> <strong>cristopher@tuta.io</strong></span>
-              <span><span class="email-role">Alternativo</span> <strong>ecobittencourt@icloud.com</strong></span>
-              <span><span class="email-role">Alternativo</span> <strong>enzocristopher2@gmail.com</strong></span>
-            </div>
-          </div>
-          <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
-        </div>
+        <p class="section-kicker">Contato</p>
+        <h2 id="contact-title" data-personalized-text>Vamos construir algo juntos?</h2>
+        <p id="contactText">Estou aberto a oportunidades de estágio e projetos na área de tecnologia.</p>
+        <div class="contact-emails" id="contactEmails" aria-label="E-mails de contato"></div>
         <div class="contact-actions" id="contactLinks"></div>
+        <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Feito por <span id="footerName">Enzo Cristopher Oliveira Bittencourt</span> <span id="year"></span>.</p>
+      <div class="footer-visitor">
+        <p id="visitorFarewell" data-personalized-text>Obrigado pela visita.</p>
+        <button class="footer-personalize" id="visitorSettings" type="button" data-personalized-text>Personalizar visita</button>
+      </div>
+      <p>Projetado e desenvolvido por <span id="footerName">Enzo Cristopher Oliveira Bittencourt</span>.</p>
+      <p>© <span id="year"></span></p>
     </footer>
 
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=40"></script>
   </body>
 </html>
