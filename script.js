@@ -5,7 +5,7 @@ const portfolio = {
   availability: "Disponível para oportunidades de estágio e júnior",
   headline: "Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial",
   intro:
-    "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, os projetos que venho construindo e como estou direcionando minha trajetória para software e inteligência artificial.",
+    "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, explorar os projetos que venho construindo e acompanhar minha evolução na área de tecnologia, com foco em desenvolvimento de software e inteligência artificial.",
   focusArea: "Python, web, dados e IA",
   jobTarget: "Júnior ou estágio",
   email: "cristopher@tuta.io",
@@ -23,29 +23,29 @@ const portfolio = {
       githubRepoCount: true,
     },
     {
-      value: "Front-end",
-      label: "Interfaces web",
-      text: "Criação de interfaces responsivas com HTML, CSS, JavaScript e integração com APIs.",
+      value: "Engenharia de Software",
+      label: "Universidade de Vassouras",
+      text: "Formação atual e desenvolvimento de aplicações completas, do front-end ao back-end.",
     },
     {
-      value: "Back-end",
-      label: "APIs e aplicações",
-      text: "Desenvolvimento com Python, Flask, Django REST Framework, Node.js e Express.",
+      value: "Inteligência Artificial",
+      label: "Trabalho Freelancer",
+      text: "Experiência profissional com avaliação de modelos e projetos próprios com LLMs, RAG e visão computacional.",
     },
     {
-      value: "Dados",
-      label: "Bancos e análise",
-      text: "Modelagem e consultas com SQL, SQLite e MySQL, além de NumPy, Excel e Power BI.",
+      value: "Stack Principal",
+      label: "Tecnologias e Integrações",
+      text: "Foco em back-end, IA aplicada, dados e automação, trabalhando principalmente com Python, APIs, bancos de dados, LLMs e integração de sistemas.",
     },
     {
-      value: "IA aplicada",
-      label: "LLMs, RAG e visão computacional",
-      text: "Criação e avaliação de soluções com LLMs, RAG, embeddings, OpenCV e modelos locais.",
+      value: "Experiência Internacional",
+      label: "Formação e experiência em Luxemburgo",
+      text: "Formação técnica e experiência profissional em Luxemburgo, com vivência em ambientes multiculturais.",
     },
     {
-      value: "DevOps & Automação",
-      label: "Entrega e fluxos de trabalho",
-      text: "Versionamento com Git/GitHub, ambientes com Docker e automações com n8n e Arduino.",
+      value: "Perfil Multidisciplinar",
+      label: "",
+      text: "Experiência prática em diferentes frentes da tecnologia, conectando desenvolvimento de software, inteligência artificial, dados e automação conforme as necessidades de cada projeto.",
     },
   ],
   projects: [
@@ -158,7 +158,7 @@ const portfolio = {
     },
     {
       title: "Idiomas",
-      items: ["Português - Nativo", "Francês - Avançado (B2)", "Inglês - Intermediário", "Espanhol - Básico"],
+      items: ["Português - Nativo", "Francês - Avançado", "Inglês - Intermediário", "Espanhol - Básico"],
     },
   ],
   experiences: [
@@ -215,7 +215,7 @@ const englishTranslations = Object.freeze({
   "Olá, eu sou": "Hi, I'm",
   "Estudante de Engenharia de Software com foco em Python, Dados, Web e Inteligência Artificial": "Software Engineering student focused on Python, Data, Web Development and Artificial Intelligence",
   "Sou estudante de Engenharia de Software com formação técnica e experiência internacional em Luxemburgo. Desenvolvo projetos acadêmicos em web, APIs, visão computacional e bancos de dados, com interesse em Python, dados e IA aplicada.": "I am a Software Engineering student with a technical background and international experience in Luxembourg. I build projects involving web development, APIs, computer vision and databases, with a focus on Python, data and applied AI.",
-  "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, os projetos que venho construindo e como estou direcionando minha trajetória para software e inteligência artificial.": "This is my portfolio. Here you can learn a little about me, the projects I have been building, and how I am shaping my path in software and artificial intelligence.",
+  "Este é o meu portfólio. Aqui você pode conhecer um pouco sobre mim, explorar os projetos que venho construindo e acompanhar minha evolução na área de tecnologia, com foco em desenvolvimento de software e inteligência artificial.": "This is my portfolio. Here you can learn a little about me, explore the projects I have been building, and follow my growth in technology, with a focus on software development and artificial intelligence.",
   "Por onde você quer começar?": "Where would you like to start?",
   "Navegação inicial": "Introductory navigation",
   "Explorar projetos": "Explore projects",
@@ -232,20 +232,20 @@ const englishTranslations = Object.freeze({
   "Combino formação em Engenharia de Software, base técnica e experiência prática no Brasil e em Luxemburgo. Desenvolvo soluções de ponta a ponta — de interfaces e APIs à análise de dados e aplicações com inteligência artificial — sempre buscando compreender o problema antes de escolher a tecnologia.": "I combine a Software Engineering education, a technical background and hands-on experience in Brazil and Luxembourg. I develop end-to-end solutions — from interfaces and APIs to data analysis and artificial intelligence applications — always seeking to understand the problem before choosing the technology.",
   "Projetos públicos no GitHub": "Public GitHub projects",
   "Contagem atualizada automaticamente a partir do meu perfil público.": "Count updated automatically from my public profile.",
-  "Front-end": "Front-end",
-  "Interfaces web": "Web interfaces",
-  "Criação de interfaces responsivas com HTML, CSS, JavaScript e integração com APIs.": "Responsive interfaces built with HTML, CSS, JavaScript and API integration.",
-  "Back-end": "Back-end",
-  "APIs e aplicações": "APIs and applications",
-  "Desenvolvimento com Python, Flask, Django REST Framework, Node.js e Express.": "Development with Python, Flask, Django REST Framework, Node.js and Express.",
-  "Dados": "Data",
-  "Bancos e análise": "Databases and analysis",
-  "Modelagem e consultas com SQL, SQLite e MySQL, além de NumPy, Excel e Power BI.": "Data modeling and queries with SQL, SQLite and MySQL, plus NumPy, Excel and Power BI.",
-  "LLMs, RAG e visão computacional": "LLMs, RAG and computer vision",
-  "Criação e avaliação de soluções com LLMs, RAG, embeddings, OpenCV e modelos locais.": "Development and evaluation of solutions using LLMs, RAG, embeddings, OpenCV and local models.",
-  "DevOps & Automação": "DevOps & Automation",
-  "Entrega e fluxos de trabalho": "Delivery and workflows",
-  "Versionamento com Git/GitHub, ambientes com Docker e automações com n8n e Arduino.": "Version control with Git/GitHub, Docker environments and automation using n8n and Arduino.",
+  "Engenharia de Software": "Software Engineering",
+  "Universidade de Vassouras": "University of Vassouras",
+  "Formação atual e desenvolvimento de aplicações completas, do front-end ao back-end.": "Current academic focus and development of complete applications, from front-end to back-end.",
+  "Inteligência Artificial": "Artificial Intelligence",
+  "Trabalho Freelancer": "Freelance Work",
+  "Experiência profissional com avaliação de modelos e projetos próprios com LLMs, RAG e visão computacional.": "Professional experience evaluating models and building personal projects with LLMs, RAG and computer vision.",
+  "Stack Principal": "Core Stack",
+  "Tecnologias e Integrações": "Technologies and Integrations",
+  "Foco em back-end, IA aplicada, dados e automação, trabalhando principalmente com Python, APIs, bancos de dados, LLMs e integração de sistemas.": "Focused on back-end, applied AI, data and automation, working primarily with Python, APIs, databases, LLMs and system integration.",
+  "Experiência Internacional": "International Experience",
+  "Formação e experiência em Luxemburgo": "Education and Experience in Luxembourg",
+  "Formação técnica e experiência profissional em Luxemburgo, com vivência em ambientes multiculturais.": "Technical education and professional experience in Luxembourg, with experience in multicultural environments.",
+  "Perfil Multidisciplinar": "Multidisciplinary Profile",
+  "Experiência prática em diferentes frentes da tecnologia, conectando desenvolvimento de software, inteligência artificial, dados e automação conforme as necessidades de cada projeto.": "Hands-on experience across different areas of technology, connecting software development, artificial intelligence, data and automation according to each project's needs.",
   "Minha trajetória combina desenvolvimento de software, suporte técnico e experiências práticas no Brasil e em Luxemburgo. Gosto de compreender o problema antes de escolher a tecnologia.": "My background combines software development, technical support and hands-on experience in Brazil and Luxembourg. I like to understand the problem before choosing the technology.",
   "Hoje, direciono meus estudos para aplicações web, APIs, dados, automação e inteligência artificial aplicada.": "Today, I focus my studies on web applications, APIs, data, automation and applied artificial intelligence.",
   "Projetos em web, API REST, visão computacional, dados e automação com Arduino.": "Projects involving web development, REST APIs, computer vision, data and Arduino automation.",
@@ -318,7 +318,7 @@ const englishTranslations = Object.freeze({
   "Fundamentos de cibersegurança": "Cybersecurity fundamentals",
   "Idiomas": "Languages",
   "Português - Nativo": "Portuguese - Native",
-  "Francês - Avançado (B2)": "French - Advanced (B2)",
+  "Francês - Avançado": "French - Advanced",
   "Inglês - Intermediário": "English - Intermediate",
   "Espanhol - Básico": "Spanish - Basic",
   "Vamos construir algo juntos?": "Let's build something together?",
@@ -499,10 +499,10 @@ function updatePersonalizedCopy() {
     const welcomeText = isEnglish
       ? visitorIsReturning
         ? `Welcome back, ${visitorName}.`
-        : `Hi, ${visitorName}.`
+        : `Hello, welcome, ${visitorName}.`
       : visitorIsReturning
         ? `Que bom ter você de volta, ${visitorName}.`
-        : `Olá, ${visitorName}.`;
+        : `Olá, seja bem-vindo, ${visitorName}.`;
 
     setHeroPresentation(welcomeText, isEnglish, visitorName);
     setPersonalizedText(
@@ -711,7 +711,10 @@ function showVisitorWelcome(name) {
   updatePersonalizedCopy();
 
   content.classList.add("is-confirming");
-  setText("#visitorIntroWelcome", currentLanguage === "en" ? `Hello, ${name}.` : `Olá, ${name}.`);
+  setText(
+    "#visitorIntroWelcome",
+    currentLanguage === "en" ? `Hello, welcome, ${name}.` : `Olá, seja bem-vindo, ${name}.`
+  );
 
   window.setTimeout(() => {
     content.hidden = true;
@@ -985,7 +988,7 @@ function renderFacts() {
     card.className = "fact-card";
     card.innerHTML = `
       <strong${fact.githubRepoCount ? ' data-github-repo-count aria-live="polite"' : ""}>${fact.value}</strong>
-      <h3>${fact.label}</h3>
+      ${fact.label ? `<h3>${fact.label}</h3>` : ""}
       <span>${fact.text}</span>
     `;
     list.appendChild(card);
